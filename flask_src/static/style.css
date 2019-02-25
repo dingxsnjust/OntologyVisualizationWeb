@@ -1,11 +1,25 @@
 html {
   font-family: sans-serif;
   background: #eee;
-  padding: 1rem;
+  /* padding: 1rem; */
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+#searchInput {
+    width: 600px;
+    height: 60px;
+    font-size: 40px;
+}
+
+#searchSubmit {
+    height: 67px;
+    width: 50px;
+    font-size: 30px; 
 }
 
 body {
-  max-width: 960px;
   margin: 0 auto;
   background: white;
 }
