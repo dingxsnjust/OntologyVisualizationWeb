@@ -1,0 +1,867 @@
+<!--
+<!doctype html>
+<title>Ontology Visualization</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<div align="center" class="search">
+    <form method="post">
+        <input type="text" name="search" id="searchInput" required>
+        <input type="submit" id="searchSubmit" value="搜索">
+    </form>
+</div>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>ECharts</title>
+    <!-- 引入 echarts.js -->
+    <script src="{{ url_for('static', filename='echarts.min.js') }}"></script>  
+    <script src="{{ url_for('static', filename='jquery-3.3.1.js') }}"></script>
+    <script type="text/javascript" src="http://gallery.echartsjs.com/dep/echarts/map/js/china.js""></script>
+    
+    
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 2050px;height:1200px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        /*注：源码就是下面这些，只要复制到开发工具就行，然后把
+        地图json数据（下载地址：https://share.weiyun.com/5x12K4r）的路径放对，
+        并且要导入echarts就可以渲染出来地图了*/
+        var zhongguo = "/static/map/data-china.json";
+        var hainan = "/static/map/data-hainan.json";
+        var xizang = "/static/map/data-xizang.json";
+        var zhejiang = "/static/map/data-zhejiang.json";
+        var yunnan = "/static/map/data-yunnan.json";
+        var xinjiang = "/static/map/data-xinjiang.json";
+        var tianjin = "/static/map/data-tianjin.json";
+        var sichuan = "/static/map/data-sichuan.json";
+        var shanxi = "/static/map/data-shanxi.json";
+        var shangxi = "/static/map/data-shangxi.json";
+        var shanghai = "/static/map/data-shanghai.json";
+        var shangdong = "/static/map/data-shangdong.json";
+        var qinghai = "/static/map/data-qinghai.json";
+        var ningxia = "/static/map/data-ningxia.json";
+        var neimenggu = "/static/map/data-neimenggu.json";
+        var liaoning = "/static/map/data-liaoning.json";
+        var jilin = "/static/map/data-jilin.json";
+        var jiangxi = "/static/map/data-jiangxi.json";
+        var jiangsu = "/static/map/data-jiangsu.json";
+        var hunan = "/static/map/data-hunan.json";
+        var hubei = "/static/map/data-hubei.json";
+        var henan = "/static/map/data-henan.json";
+        var heilongjiang = "/static/map/data-heilongjiang.json";
+        var hebei = "/static/map/data-hebei.json";
+        var guizhou = "/static/map/data-guizhou.json";
+        var guangxi = "/static/map/data-guangxi.json";
+        var guangdong = "/static/map/data-guangdong.json";
+        var gansu = "/static/map/data-gansu.json";
+        var chongqing = "/static/map/data-chongqing.json";
+        var aomen = "/static/map/data-aomen.json";
+        var anhui = "/static/map/data-anhui.json";
+        var beijing = "/static/map/data-beijing.json";
+        var fujian = "/static/map/data-fujian.json";
+        var xianggang = "/static/map/data-xianggang.json";
+
+        echarts.extendsMap = function(id, opt) {
+            // 实例
+            var chart = this.init(document.getElementById(id));
+
+            var curGeoJson = {};
+            var cityMap = {
+                '中国': zhongguo,
+                '上海': shanghai,
+                '河北': hebei,
+                '山西': shangxi,
+                '内蒙古': neimenggu,
+                '辽宁': liaoning,
+                '吉林': jilin,
+                '黑龙江': heilongjiang,
+                '江苏': jiangsu,
+                '浙江': zhejiang,
+                '安徽': anhui,
+                '福建': fujian,
+                '江西': jiangxi,
+                '山东': shangdong,
+                '河南': henan,
+                '湖北': hubei,
+                '湖南': hunan,
+                '广东': guangdong,
+                '广西': guangxi,
+                '海南': hainan,
+                '四川': sichuan,
+                '贵州': guizhou,
+                '云南': yunnan,
+                '西藏': xizang,
+                '陕西': shanxi,
+                '甘肃': gansu,
+                '青海': qinghai,
+                '宁夏': ningxia,
+                '新疆': xinjiang,
+                '北京': beijing,
+                '天津': tianjin,
+                '重庆': chongqing,
+                '香港': xianggang,
+                '澳门': aomen
+            };
+            var geoCoordMap = {
+                "北京": [116.405289,39.904987],
+                "天津": [117.190186,39.125595],
+                "沈阳": [123.429092,41.796768],
+                "长春": [125.324501,43.886841],
+                "哈尔滨": [126.642464,45.756966],
+                "呼和浩特": [111.751990,40.841490],
+                "银川": [106.232480,38.486440],
+                "太原": [112.549248,37.857014],
+                "石家庄": [114.502464,38.045475],
+                "济南": [117.000923,36.675808],
+                "郑州": [113.665413,34.757977],
+                "西安": [108.948021,34.263161],
+                "武汉": [114.298569,30.584354],
+                "南京": [118.76741,32.041546],
+                "合肥": [117.283043,31.861191],
+                "上海": [121.472641,31.231707],
+                "长沙": [112.982277,28.19409],
+                "南昌": [115.892151,28.676493],
+                "杭州": [120.15358,30.287458],
+                "福州": [119.306236,26.075302],
+                "广州": [113.28064,23.125177],
+                "海口": [110.199890,20.044220],
+                "南宁": [108.320007,22.82402],
+                "重庆": [106.504959,29.533155],
+                "昆明": [102.71225,25.040609],
+                "贵阳": [106.713478,26.578342],
+                "成都": [104.065735,30.659462],
+                "兰州": [103.834170,36.061380],
+                "西宁": [101.777820,36.617290],
+                "拉萨": [91.11450,29.644150],
+                "乌鲁木齐": [87.616880,43.826630],
+                "香港": [114.165460,22.275340],
+                "澳门": [113.549130,22.198750],
+            };
+            
+            var levelColorMap = {
+                '1': 'rgba(241, 109, 115, .8)',
+                '2': 'rgba(255, 235, 59, .7)',
+                '3': 'rgba(147, 235, 248, 1)'
+            };
+
+            var defaultOpt = {
+                mapName: 'china', // 地图展示
+                goDown: false, // 是否下钻
+                bgColor: '#404a59', // 画布背景色
+                activeArea: [], // 区域高亮,同echarts配置项
+                data: [],
+                // 下钻回调(点击的地图名、实例对象option、实例对象)
+                callback: function(name, option, instance) {}
+            };
+            if (opt) opt = this.util.extend(defaultOpt, opt);
+
+            // 层级索引
+            var name = [opt.mapName];
+            var idx = 0;
+            var pos = {
+                leftPlus: 115,
+                leftCur: 150,
+                left: 198,
+                top: 50
+            };
+
+            var line = [
+                [0, 0],
+                [8, 11],
+                [0, 22]
+            ];
+            // style
+            var style = {
+                font: '18px "Microsoft YaHei", sans-serif',
+                textColor: '#eee',
+                lineColor: 'rgba(147, 235, 248, .8)'
+            };
+
+            var handleEvents = {
+                /**
+                 * i 实例对象
+                 * o option
+                 * n 地图名
+                 **/
+                resetOption: function(i, o, n) {
+                    var breadcrumb = this.createBreadcrumb(n);
+                    var j = name.indexOf(n);
+                    var l = o.graphic.length;
+                    if (j < 0) {
+                        o.graphic.push(breadcrumb);
+                        o.graphic[0].children[0].shape.x2 = 145;
+                        o.graphic[0].children[1].shape.x2 = 145;
+                        if (o.graphic.length > 2) {
+                            var cityData = [];
+                            var cityJson;
+                            for (var x = 0; x < opt.data.length; x++) {
+                                if(n === opt.data[x].city){
+                                    $([opt.data[x]]).each(function(index,data){
+                                        cityJson = {city:data.city,name:data.name,value:data.value,crew:data.crew,company:data.company,position:data.position,region:data.region};
+                                        cityData.push(cityJson)
+                                    }) 
+                                }
+                            }
+                            
+                            if(cityData!=null){
+                                o.series[0].data = handleEvents.initSeriesData(cityData);
+                            }else{
+                                o.series[0].data = [];
+                            }
+                            
+                            
+                        }
+                        name.push(n);
+                        idx++;
+                    } else {
+                        o.graphic.splice(j + 2, l);
+                        if (o.graphic.length <= 2) {
+                            o.graphic[0].children[0].shape.x2 = 60;
+                            o.graphic[0].children[1].shape.x2 = 60;
+                            o.series[0].data = handleEvents.initSeriesData(opt.data);
+                        };
+                        name.splice(j + 1, l);
+                        idx = j;
+                        pos.leftCur -= pos.leftPlus * (l - j - 1);
+                    };
+
+                    o.geo.map = n;
+                    o.geo.zoom = 0.4;
+                    i.clear();
+                    i.setOption(o);
+                    this.zoomAnimation();
+                    opt.callback(n, o, i);
+                },
+
+                /**
+                 * name 地图名
+                 **/
+                createBreadcrumb: function(name) {
+                    var cityToPinyin = {
+                        '中国': 'zhongguo',
+                        '上海': 'shanghai',
+                        '河北': 'hebei',
+                        '山西': 'shangxi',
+                        '内蒙古': 'neimenggu',
+                        '辽宁': 'liaoning',
+                        '吉林': 'jilin',
+                        '黑龙江': 'heilongjiang',
+                        '江苏': 'jiangsu',
+                        '浙江': 'zhejiang',
+                        '安徽': 'anhui',
+                        '福建': 'fujian',
+                        '江西': 'jiangxi',
+                        '山东': 'shangdong',
+                        '河南': 'henan',
+                        '湖北': 'hubei',
+                        '湖南': 'hunan',
+                        '广东': 'guangdong',
+                        '广西': 'guangxi',
+                        '海南': 'hainan',
+                        '四川': 'sichuan',
+                        '贵州': 'guizhou',
+                        '云南': 'yunnan',
+                        '西藏': 'xizang',
+                        '陕西': 'shanxi',
+                        '甘肃': 'gansu',
+                        '青海': 'qinghai',
+                        '宁夏': 'ningxia',
+                        '新疆': 'xinjiang',
+                        '北京': 'beijing',
+                        '天津': 'tianjin',
+                        '重庆': 'chongqing',
+                        '香港': 'xianggang',
+                        '澳门': 'aomen'
+                    };
+                    var breadcrumb = {
+                        type: 'group',
+                        id: name,
+                        left: pos.leftCur + pos.leftPlus,
+                        top: pos.top + 3,
+                        children: [{
+                            type: 'polyline',
+                            left: -90,
+                            top: -5,
+                            shape: {
+                                points: line
+                            },
+                            style: {
+                                stroke: '#fff',
+                                key: name
+                                // lineWidth: 2,
+                            },
+                            onclick: function() {
+                                var name = this.style.key;
+                                handleEvents.resetOption(chart, option, name);
+                            }
+                        }, {
+                            type: 'text',
+                            left: -68,
+                            top: 'middle',
+                            style: {
+                                text: name,
+                                textAlign: 'center',
+                                fill: style.textColor,
+                                font: style.font
+                            },
+                            onclick: function() {
+                                var name = this.style.text;
+                                handleEvents.resetOption(chart, option, name);
+                            }
+                        }, {
+                            type: 'text',
+                            left: -68,
+                            top: 10,
+                            style: {
+
+                                name: name,
+                                text: cityToPinyin[name] ? cityToPinyin[name].toUpperCase() : '',
+                                textAlign: 'center',
+                                fill: style.textColor,
+                                font: '12px "Microsoft YaHei", sans-serif',
+                            },
+                            onclick: function() {
+                                // console.log(this.style);
+                                var name = this.style.name;
+                                handleEvents.resetOption(chart, option, name);
+                            }
+                        }]
+                    }
+
+                    pos.leftCur += pos.leftPlus;
+
+                    return breadcrumb;
+                },
+
+               // 设置effectscatter
+                initSeriesData: function(data) {
+                    var temp = [];
+                    for (var i = 0; i < data.length; i++) {
+                        var geoCoord = geoCoordMap[data[i].name];
+                        if (geoCoord) {
+                            temp.push({
+                                name: data[i].name,
+                                value: geoCoord.concat(data[i].value),
+                                crew:data[i].crew,
+                                company:data[i].company,
+                                position:data[i].position,
+                                region:data[i].region
+                            });
+                        }
+                    };
+                    return temp;
+                },
+                zoomAnimation: function() {
+                    var count = null;
+                    var zoom = function(per) {
+                        if (!count) count = per;
+                        count = count + per;
+                        // console.log(per,count);
+                        chart.setOption({
+                            geo: {
+                                zoom: count
+                            }
+                        });
+                        if (count < 1) window.requestAnimationFrame(function() {
+                            zoom(0.2);
+                        });
+                    };
+                    window.requestAnimationFrame(function() {
+                        zoom(0.2);
+                    });
+                }
+            };
+
+            var option = {
+                backgroundColor: opt.bgColor,
+                 tooltip: {
+                    show: true,
+                    trigger:'item',
+                    alwaysShowContent:false,
+                    backgroundColor:'rgba(50,50,50,0.7)',
+                    hideDelay:100,
+                    triggerOn:'mousemove',
+                    enterable:true,
+                    position:['60%','70%'],
+                    formatter:function(params, ticket, callback){
+                        return '简称：'+params.data.name+'<br/>'+'机组：'+params.data.crew+'万千瓦'+'<br/>'+'公司名称：'+params.data.company+'<br/>'+'所属大区：'+params.data.region+'<br/>'+'所在位置：'+params.data.position
+                    }
+                },
+                graphic: [{
+                    type: 'group',
+                    left: pos.left,
+                    top: pos.top - 4,
+                    children: [{
+                        type: 'line',
+                        left: 0,
+                        top: -20,
+                        shape: {
+                            x1: 0,
+                            y1: 0,
+                            x2: 60,
+                            y2: 0
+                        },
+                        style: {
+                            stroke: style.lineColor,
+                        }
+                    }, {
+                        type: 'line',
+                        left: 0,
+                        top: 20,
+                        shape: {
+                            x1: 0,
+                            y1: 0,
+                            x2: 60,
+                            y2: 0
+                        },
+                        style: {
+                            stroke: style.lineColor,
+                        }
+                    }]
+                }, 
+                {
+                    id: name[idx],
+                    type: 'group',
+                    left: pos.left + 2,
+                    top: pos.top,
+                    children: [{
+                        type: 'polyline',
+                        left: 90,
+                        top: -12,
+                        shape: {
+                            points: line
+                        },
+                        style: {
+                            stroke: 'transparent',
+                            key: name[0]
+                        },
+                        onclick: function() {
+                            var name = this.style.key;
+                            handleEvents.resetOption(chart, option, name);
+                        }
+                    }, {
+                        type: 'text',
+                        left: 0,
+                        top: 'middle',
+                        style: {
+                            text: '中国',
+                            textAlign: 'center',
+                            fill: style.textColor,
+                            font: style.font
+                        },
+                        onclick: function() {
+                            handleEvents.resetOption(chart, option, '中国');
+                        }
+                    }, {
+                        type: 'text',
+                        left: 0,
+                        top: 10,
+                        style: {
+                            text: 'China',
+                            textAlign: 'center',
+                            fill: style.textColor,
+                            font: '12px "Microsoft YaHei", sans-serif',
+                        },
+                        onclick: function() {
+                            handleEvents.resetOption(chart, option, '中国');
+                        }
+                    }]
+                }],
+                geo: {
+                    map: opt.mapName,
+                    roam: true,
+                    zoom: 1,
+                    label: {
+                        normal: {
+                            show: true,
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        },
+                        emphasis: {
+                            textStyle: {
+                                color: '#fff'
+                            }
+                        }
+                    },
+                    itemStyle: {
+                        normal: {
+                            borderColor: 'rgba(147, 235, 248, 1)',
+                            borderWidth: 1,
+                            areaColor: {
+                                type: 'radial',
+                                x: 0.5,
+                                y: 0.5,
+                                r: 0.8,
+                                colorStops: [{
+                                    offset: 0,
+                                    color: 'rgba(147, 235, 248, 0)' // 0% 处的颜色
+                                }, {
+                                    offset: 1,
+                                    color: 'rgba(147, 235, 248, .2)' // 100% 处的颜色
+                                }],
+                                globalCoord: false // 缺省为 false
+                            },
+                            shadowColor: 'rgba(128, 217, 248, 1)',
+                            // shadowColor: 'rgba(255, 255, 255, 1)',
+                            shadowOffsetX: -2,
+                            shadowOffsetY: 2,
+                            shadowBlur: 10
+                        },
+                        emphasis: {
+                            areaColor: '#389BB7',
+                            borderWidth: 0
+                        }
+                    },
+                    regions: opt.activeArea.map(function(item) {
+                        if (typeof item !== 'string') {
+                            return {
+                                name: item.name,
+                                itemStyle: {
+                                    normal: {
+                                        areaColor: item.areaColor || '#389BB7'
+                                    }
+                                },
+                                label: {
+                                    normal: {
+                                        show: item.showLabel,
+                                        textStyle: {
+                                            color: '#fff'
+                                        }
+                                    }
+                                }
+                            }
+                        } else {
+                            return {
+                                name: item,
+                                itemStyle: {
+                                    normal: {
+                                        borderColor: '#91e6ff',
+                                        areaColor: '#389BB7'
+                                    }
+                                }
+                            }
+                        }
+                    })
+                },
+                series: [{
+                    type: 'effectScatter',
+                    coordinateSystem: 'geo',
+                    showEffectOn: 'render',
+                    rippleEffect: {
+                        period:15,
+                        scale: 4,
+                        brushType: 'fill'
+                    },
+                    hoverAnimation: true,
+                    itemStyle: {
+                        normal: {
+                            color: '#FFC848',
+                            shadowBlur: 10,
+                            shadowColor: '#333'
+                        }
+                    },
+                    data: handleEvents.initSeriesData(opt.data)
+                }]
+            };
+
+            chart.setOption(option);
+            // 添加事件
+            chart.on('click', function(params) {
+                var _self = this;
+                if (opt.goDown && params.name !== name[idx]) {
+                    if (cityMap[params.name]) {
+                        var url = cityMap[params.name];
+                        $.get(url, function(response) {
+                            //console.log(response);
+                            curGeoJson = response;
+                            echarts.registerMap(params.name, response);
+                            handleEvents.resetOption(_self, option, params.name);
+                        });
+                    }
+                }
+            });
+
+            chart.setMap = function(mapName) {
+                var _self = this;
+                if (mapName.indexOf('市') < 0) mapName = mapName + '市';
+                var citySource = cityMap[mapName];
+                if (citySource) {
+                    var url = './map/' + citySource + '.json';
+                    $.get(url, function(response) {
+                        // console.log(response);
+                        curGeoJson = response;
+                        echarts.registerMap(mapName, response);
+                        handleEvents.resetOption(_self, option, mapName);
+                    });
+                }
+                
+            };
+
+            return chart;
+        };
+
+        $.getJSON(zhongguo, function(geoJson) {
+            echarts.registerMap('中国', geoJson);
+            var myChart = echarts.extendsMap('main', {
+                bgColor: '#154e90', // 画布背景色
+                mapName: '中国', // 地图名
+                text:'火电业务',
+                goDown: true, // 是否下钻
+                // 下钻回调
+                callback: function(name, option, instance) {
+                    //console.log(name, option, instance);
+                },
+                // 数据展示       
+                /*
+                data: [{city:'北京',name: "北京",value: 2*30,crew:'2*30',company:"磴口金牛煤电",position:'内蒙古自治区巴彦淖尔市磴口县',region:'北方大区'},
+                        {city:'辽宁',name: "沈阳",value: 3*20,crew:'3*20',company:"沈阳沈海热电",position:'辽宁省沈阳市大东区',region:'东北大区'},
+                        {city:'吉林',name: "长春",value: 2*35,crew:'2*35',company:"华润电力盘锦",position:'辽宁省盘锦市大洼区后胡嘴子',region:'东北大区'},
+                        {city:'浙江',name: "杭州",value: 2*100,crew:'2*100',company:"华润电力(温州)有限公司",position:'浙江省温州市苍南县龙港镇',region:'东南大区'},
+                        {city:'河北',name: "石家庄",value: 2*33,crew:'2*33',company:"沧州华润热电",position:'河北省沧州市运河区北环西路',region:'华北大区'},
+                        {city:'天津',name: "天津",value: 2*30,crew:'2*30',company:"唐山曹妃甸",position:'河北省唐山市曹妃甸工业区',region:'华北大区'},
+                        {city:'黑龙江',name: "哈尔滨",value: 2*35,crew:'2*35',company:"华润电力唐山丰润",position:'河北省唐山市路北区韩城镇',region:'华北大区'},
+                        {city:'内蒙古',name: "呼和浩特",value: 2*35,crew:'2*35',company:"渤海华润电力",position:'河北省沧州市临港经济技术开发区',region:'华北大区'},
+                        {city:'山东',name: "济南",value: 2*60,crew:'2*60',company:"华润热电（菏泽）有限公司",position:'山东省菏泽市东明县武胜桥镇',region:'华东大区'},
+                        {city:'安徽',name: "合肥",value: 2*64,crew:'2*64',company:"阜阳华润电力有限公司",position:'安徽省阜阳市颍泉区',region:'华东大区'},
+                        {city:'广东',name: "广州",value: 2*100,crew:'2*100',company:"华润电力(海丰)有限公司",position:'广东省汕尾市海丰县小漠镇',region:'华南大区'},
+                        {city:'广西',name: "南宁",value: 2*100,crew:'2*100',company:"华润电力(贺州)有限公司",position:'广西贺州市贺州大道',region:'华南大区'},
+                        {city:'江西',name: "南昌",value: 2*30,crew:'2*30',company:"华润电力湖南有限公司",position:'湖南省资兴市鲤鱼江镇',region:'华南大区'},
+                        {city:'福建',name: "福州",value: 2*65,crew:'2*65',company:"湖南华润电力鲤鱼江有限公司",position:'湖南省资兴市鲤鱼江镇',region:'华南大区'},
+                        {city:'河南',name: "郑州",value: 2*30,crew:'2*30',company:"广州华润热电有限公司",position:'广州市南沙区黄阁镇',region:'华南大区'},
+                        {city:'湖北',name: "武汉",value: 2*30,crew:'2*30',company:"华润电力湖北有限公司",position:'湖北省赤壁市陆水大道99号',region:'华中大区'},
+                        {city:'西藏',name: "拉萨",value: 2*100,crew:'2*100',company:"华润电力湖北有限公司二期",position:'湖北省赤壁市陆水大道99号',region:'华中大区'},
+                        {city:'新疆',name: "乌鲁木齐",value: 2*30,crew:'2*30',company:"华润电力(涟源)有限公司",position:'湖南省娄底市涟源市',region:'华中大区'},
+                        {city:'甘肃',name: "兰州",value: 2*35,crew:'2*35',company:"华润电力(宜昌)有限公司",position:'湖北省宜昌市猇亭区',region:'华中大区'},
+                        {city:'宁夏',name: "银川",value: 4*32,crew:'4*32',company:"徐州华润电力有限公司",position:'江苏省徐州市华润路1号',region:'江苏大区'},
+                        {city:'山西',name: "太原",value: 2*60,crew:'2*60',company:"江苏南热发电有限责任公司",position:'江苏省南京市六合区',region:'江苏大区'},
+                        {city:'江苏',name: "南京",value: 2*15,crew:'2*6',company:"宜兴华润热电有限公司",position:'江苏省无锡市宜兴市环保科技工业园',region:'江苏大区'},
+                        {city:'四川',name: "成都",value: 2*63+2*13.5,crew:'2*63+2*13.5',company:"江苏镇江发电有限公司",position:'江苏省镇江市丹徒区高资镇',region:'江苏大区'},
+                        {city:'重庆',name: "重庆",value: 2*33,crew:'2*33',company:"徐州华鑫发电有限公司",position:'徐州市铜山区茅村工业园',region:'江苏大区'},
+                        {city:'上海',name: "上海",value: 2*65,crew:'2*65',company:"华润电力(常熟)有限公司",position:'江苏省常熟市珠江东路',region:'江苏大区'},
+                        {city:'香港',name: "香港",value: 2*33,crew:'2*33',company:"南京华润热电有限公司",position:'江苏省徐州市铜山区',region:'江苏大区'},
+                        {city:'澳门',name: "澳门",value: 2*100,crew:'2*100',company:"铜山华润电力有限公司",position:'江苏省徐州市铜山区',region:'江苏大区'},
+                        {city:'贵州',name: "贵阳",value: 2*66,crew:'2*66',company:"六枝华润电力",position:'贵州省六盘水市六枝特区岩脚镇',region:'西南大区'},
+                        {city:'云南',name: "昆明",value: 2*60,crew:'2*60',company:"河南华润电力首阳山有限公司",position:'河南省偃师市首阳山镇',region:'中西大区'},
+                        {city:'海南',name: "海口",value: 2*66,crew:'2*66',company:"华润电力焦作有限公司",position:'河南省焦作市博爱县柏山镇',region:'中西大区'},
+                        {city:'湖南',name: "长沙",value: 2*32+2*60,crew:'2*32+2*60',company:"华润电力登封有限公司",position:'河南省登封市东刘碑村',region:'中西大区'},
+                        {city:'陕西',name: "西安",value: 2*15,crew:'2*5',company:"洛阳华润环保能源有限公司",position:'河南省偃师市城关工业区',region:'中西大区'},
+                        {city:'青海',name: "西宁",value: 2*30,crew:'2*30',company:"河南华润电力古城有限公司",position:'河南驻马店市驿城区古城乡',region:'中西大区'}]
+                        */
+            });
+        })
+        /*分享需要的*/
+        
+        
+       //数据定义区
+        var typeArr = ["图片","文献","音视频","多媒体"];
+        var typeIndex = 1;
+        var selectedRange = null;
+        var option_pie = null;
+        var str = "";
+        var data = [];
+        var geoCoordMap_pie = {};
+        var name = "书法资料统计"
+        var mapName = 'china'
+        // 地图特征
+        var mapFeatures = echarts.getMap(mapName).geoJson.features;
+        mapFeatures.forEach(function(v){
+            // 地区名称
+            var name = v.properties.name;
+            // 地区经纬度
+            geoCoordMap_pie[name] = v.properties.cp;
+            data.push({
+                // 需要挨个处理各地区数据（不使用随机产生的数）：另外需要构造的数据是柱图数据
+                "name":name,
+                "value":[
+                {name:"图片",value:Math.round(Math.random() * 100 + 10)},
+                {name:"文献",value:Math.round(Math.random() * 100 + 10)},
+                {name:"音视频",value:Math.round(Math.random() * 100 + 10)},
+                {name:"多媒体",value:Math.round(Math.random() * 100 + 10)}
+                ]
+            })
+        });
+        // 地理坐标图(打印出来方便查看)
+        console.log("===========geoCoordMap_pie===============");
+        for (var i in geoCoordMap_pie) {
+            console.log(geoCoordMap_pie[i]);
+        }
+        console.log(geoCoordMap_pie);
+        console.log("==============data===============");
+        console.log(data);
+
+        /*变换地图数据（格式）：pie*/
+        function convertMapDta(type,data){
+            var mapData = [];
+            data.forEach(function(v){
+                v.value.forEach(function(v1){
+                    if(String(v1.name) === String(type)){
+                        // 数据格式：data: [120, 200, 150, 80]
+                        mapData.push({
+                            "name":v.name,"value":v1.value
+                        })
+                    }
+                })
+            });
+            return mapData;
+        }
+
+        console.log("================mapData==================")
+        // console.log(convertMapDta_bar(typeArr[typeIndex],data))
+        console.log(convertMapDta(typeArr[typeIndex],data))
+        console.log("=========================================")
+
+        /*resetPie*/
+        function resetPie(myChart,params,geoCoordMap_pie,typeIndex){
+            var op = myChart.getOption();
+            var ops = op.series;
+            ops.forEach(function(v,i){
+                if(i > 0){
+                    var geoCoord = geoCoordMap_pie[v.name];
+                    var p = myChart.convertToPixel({seriesIndex: 0}, geoCoord);
+                    v.center = p; 
+                    if(params != 0 && params.zoom){
+                        v.radius = v.radius * params.zoom;
+                    }
+                    if(params != 0 && params.selected){
+                        var rangeFirstNumber = params.selected[0];
+                        var rangeSecondNumber = params.selected[1];
+                        var pd = v.data[typeIndex].value;
+                        if(pd < rangeFirstNumber || pd > rangeSecondNumber){
+                            v.itemStyle.normal.opacity = 0;
+                        }else{
+                            v.itemStyle.normal.opacity = 1;
+                        }
+                    }
+                }
+            });
+            myChart.setOption(op,true);
+        }
+
+        /*addPie*/
+        function addPie(chart,data) {
+            var op = chart.getOption();
+            var sd = option_pie.series;
+            for (var i = 0; i < data.length; i++) {
+                var randomValue = Math.round(Math.random() * 30);
+                var radius = randomValue <= 10 ? 10 : randomValue;
+                var geoCoord = geoCoordMap_pie[data[i].name];
+                if (geoCoord) {
+                    var vr = [];
+                    (data[i].value).map(function(v,j){
+                        vr.push({name:v.name,value:v.value});
+                    });
+                    var p = chart.convertToPixel({seriesIndex: 0}, geoCoord);
+                    sd.push(
+                    {
+                        name:data[i].name,
+                        type:'pie',
+                        tooltip:{
+                            formatter:function(params){
+                                return params.seriesName + "<br/>" + params.name + " : " + params.value;
+                            }
+                        },
+                        radius : radius,
+                        center: p,
+                        data:vr,
+                        zlevel:4,
+                        label: {
+                            normal: {
+                                show: false,
+                            },
+                        },
+                        labelLine: {
+                            normal: {
+                                show: false
+                            }
+                        },
+                        itemStyle:{
+                            mormal:{
+                                opacity:1 
+                            }
+                        }
+                    }
+                    );
+                }
+            }
+            return sd;
+        };
+
+
+        /* 指定图表的配置项和数据:pie*/
+        var option_pie = {
+            title: {
+                text: name,
+                left: 'center',
+                textStyle: {
+                    color: '#03A89E'
+                }
+            },
+            tooltip : {
+                trigger: 'item',
+                formatter:function(params){
+                    if(params.value){
+                        return params.name + "<br/>"+ typeArr[typeIndex] +": "+ params.value;
+                    }
+                }
+            },
+
+            series : [{
+                name: 'chinaMap',
+                type: 'map',
+                mapType: mapName,
+                roam:true,
+                label: {
+                    normal: {
+                        show: true
+                    },
+                    emphasis: {
+                        show: true
+                    }
+                },
+                itemStyle:{
+                    normal:{
+                        areaColor:"#808A87"
+                    }
+                },
+                data:convertMapDta(typeArr[typeIndex],data),
+                /*zlevel:3*/
+            }]
+        };
+
+
+        if (option_pie && typeof option_pie === "object") {
+            myChart.setOption(option_pie, true);
+        }
+        /*pie*/
+        addPie(myChart,data);
+        /*bar*/
+        // addBar(myChart,data);
+        console.log("===========option_pie=================");
+        console.log(option_pie);
+        myChart.setOption(option_pie,true);
+
+        /*饼图跟着地图移动:pie*/
+        myChart.on('georoam', function (params) {
+            resetPie(myChart,params,geoCoordMap_pie,typeIndex);
+        });
+        myChart.on('datarangeselected', function (params) {
+            resetPie(myChart,params,geoCoordMap_pie,typeIndex);
+        });
+        window.addEventListener("resize",function(){
+            myChart.resize();
+            resetPie(myChart,0,geoCoordMap_pie);
+        })
+
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option_pie);        
+
+        
+    </script>
+</body>
+</html>
