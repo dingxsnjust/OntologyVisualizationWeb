@@ -1,0 +1,662 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#"
+     xml:base="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#创作 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#创作">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#发行 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#发行"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#引用 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#引用">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#形式为 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#形式为"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏于 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏于">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#涉及 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#涉及">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#载体形式"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#发行日期 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#发行日期"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#时代 -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#时代">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#人物"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书体 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书体"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#作品"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法家 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法家">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#创作者"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法研究 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法研究">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#作品"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#人物 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#人物">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#机构"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#载体形式"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#作品 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#作品">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图书"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#出版社 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#出版社">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#发行方"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#创作地 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#创作地">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#地点"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#创作者 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#创作者">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#人物"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#博物馆 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#博物馆">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏机构"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#发行方 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#发行方">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#机构"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图书 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图书">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#文档"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图书馆 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图书馆">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏机构"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图片 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图片">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#载体形式"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#地点 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#地点"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#学校 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#学校">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#发行方"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏地 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏地">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#地点"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏机构 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏机构">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#机构"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏者 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏者">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#人物"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#文档 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#文档">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#载体形式"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#时代 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#时代"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#期刊 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#期刊">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#文档"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#期刊单位 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#期刊单位">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#发行方"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#机构 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#机构"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#档案馆 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#档案馆">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏机构"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#楷书 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#楷书">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书体"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#研究者 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#研究者">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#创作者"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#篆书 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#篆书">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书体"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#草书 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#草书">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书体"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#行书 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#行书">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书体"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#视频 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#视频">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#载体形式"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#论文 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#论文">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#文档"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#载体形式 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#载体形式"/>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#隶书 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#隶书">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书体"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#上海书画出版社 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#上海书画出版社">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#出版社"/>
+        <发行 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法史鉴"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">现代</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#上海博物馆 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#上海博物馆">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#博物馆"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#上虞贴卷 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#上虞贴卷">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图片"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#草书"/>
+        <收藏于 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#上海博物馆"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">东晋</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#丛文俊 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#丛文俊">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#研究者"/>
+        <创作 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法史鉴"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">现代</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#中国书法之旅 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#中国书法之旅">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法研究"/>
+        <收藏于 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#南京大学图书馆"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">现代</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#中国书法简史 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#中国书法简史">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法研究"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图书"/>
+        <涉及 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#兰亭集序"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#中国高等教育出版社 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#中国高等教育出版社">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#出版社"/>
+        <发行 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#中国书法之旅"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">现代</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法史鉴 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法史鉴">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法研究"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图书"/>
+        <收藏于 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#四川大学图书馆"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">现代</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法美学解析 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法美学解析">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法研究"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图书"/>
+        <收藏于 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#南京大学图书馆"/>
+        <发行日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2017</发行日期>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">现代</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#元代颜真卿书风研究 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#元代颜真卿书风研究">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法研究"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#论文"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">现代</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#兰亭集序 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#兰亭集序">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图片"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#行书"/>
+        <收藏于 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#唐太宗陵墓"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">东晋</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#南京大学图书馆 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#南京大学图书馆">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图书馆"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#唐太宗陵墓 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#唐太宗陵墓">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#收藏地"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#四川大学图书馆 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#四川大学图书馆">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图书馆"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#康佳琦 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#康佳琦">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#研究者"/>
+        <创作 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#元代颜真卿书风研究"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">现代</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#张卫武 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#张卫武">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#研究者"/>
+        <创作 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#曾熙书法研究"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">现代</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#曾熙书法研究 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#曾熙书法研究">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法研究"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图书"/>
+        <发行日期 rdf:datatype="http://www.w3.org/2001/XMLSchema#dateTime">2012/4/20</发行日期>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#朱熹 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#朱熹">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法家"/>
+        <创作 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#行书十一月七日帖"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宋</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#李元博 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#李元博">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#研究者"/>
+        <创作 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法美学解析"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">现代</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#李萧锟 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#李萧锟">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#研究者"/>
+        <创作 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#中国书法之旅"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">现代</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#渤海大学出版社 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#渤海大学出版社">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#出版社"/>
+        <发行 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#元代颜真卿书风研究"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#王羲之 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#王羲之">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#创作者"/>
+        <创作 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#上虞贴卷"/>
+        <创作 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#兰亭集序"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">魏晋</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#王镛 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#王镛">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#研究者"/>
+        <创作 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#中国书法简史"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#行书十一月七日帖 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#行书十一月七日帖">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图片"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#行书"/>
+        <收藏于 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#上海博物馆"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">宋</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#西南大学出版社 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#西南大学出版社">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#出版社"/>
+        <发行 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#曾熙书法研究"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#金农 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#金农">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法家"/>
+        <创作 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#隶书七言联"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">清</时代>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#陕西人民出版社 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#陕西人民出版社">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#出版社"/>
+        <发行 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法美学解析"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#隶书七言联 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#隶书七言联">
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#书法"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#图片"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#隶书"/>
+        <收藏于 rdf:resource="http://www.semanticweb.org/liangqiseu/ontologies/2019/0/untitled-ontology-18#上海博物馆"/>
+        <时代 rdf:datatype="http://www.w3.org/2001/XMLSchema#string">清</时代>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+
