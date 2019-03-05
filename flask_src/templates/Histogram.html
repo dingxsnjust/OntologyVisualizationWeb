@@ -13,17 +13,16 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ECharts</title>
+    <title>书法作品研究资料汇总</title>
     <!-- 引入 echarts.js -->
     <script src="{{ url_for('static', filename='echarts.min.js') }}"></script>  
     <script src="{{ url_for('static', filename='jquery-3.3.1.js') }}"></script>
-    <script type="text/javascript" src="http://gallery.echartsjs.com/dep/echarts/map/js/china.js""></script>
     
     
 </head>
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 2050px;height:1200px;"></div>
+    <div id="main" style="width: 1800px;height:800px;"></div>
     <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('main'));
         option = {
@@ -37,22 +36,12 @@
                     playInterval: 1000,
 
                     data: [
-                        '猫咪', 'dog', '小兔子',
-                        {
-                            value: 'Java',
-                            tooltip: {
-                                formatter: '{b} GDP达到一个高度'
-                            },
-                            symbol: 'diamond',
-                            symbolSize: 16
-                        },
-                        'c#', 'c++'
-
+                        '先秦', '秦汉', '魏晋南北朝', '隋唐宋','元明清', '当代'
                     ],
 
                 },
                 title: {
-                    subtext: '数据来自木可统计局'
+                    subtext: '数据纯属虚构'
                 },
                 tooltip: {},
                 legend: {
@@ -80,27 +69,27 @@
                     'axisLabel': {
                         'interval': 0
                     },
-                    data: ["a", "b", "c", "d"],
+                    data: ["草书", "行书", "楷书"],
                     splitLine: {
                         show: false
                     }
                 }],
                 yAxis: [{
                     type: 'value',
-                    name: 'GDP（亿元）'
+                    name: '数量'
                 }],
                 series: [
 
                     {
-                        name: '金币1',
+                        name: '图片',
                         type: 'bar'
                     },
                     {
-                        name: '银币',
+                        name: '文献',
                         type: 'bar'
                     },
                     {
-                        name: '同比',
+                        name: '视频',
                         type: 'bar'
                     },
 
@@ -113,22 +102,22 @@
                         'axisLabel': {
                             'interval': 0
                         },
-                        data: ["b", "a", "c", "d"],
+                        data: ["草书", "行书", "楷书"],
                         splitLine: {
                             show: false
                         }
                     }],
                     title: {
-                        text: '小猫咪的金币库'
+                        text: '先秦书法作品研究资料汇总'
                     },
                     series: [{
-                            data: [1, 2, 3, 4]
+                            data: [9, 15, 6]
                         },
                         {
-                            data: [1, 2, 3, 4]
+                            data: [5, 12, 3]
                         },
                         {
-                            data: [1, 2, 3, 4]
+                            data: [6, 10, 2]
                         },
                     ]
                 },
@@ -138,22 +127,22 @@
                         'axisLabel': {
                             'interval': 0
                         },
-                        data: ["b", "a", "c", "d","散点"],
+                        data: ["草书", "行书", "楷书"],
                         splitLine: {
                             show: false
                         }
                     }],
                     title: {
-                        text: 'dog的金币库'
+                        text: '秦汉书法作品研究资料汇总'
                     },
                     series: [{
-                            data: [1, 12, 3, 4,5]
+                            data: [15, 20, 6]
                         },
                         {
-                            data: [12, 2, 3, 4,9]
+                            data: [10, 12, 4]
                         },
                         {
-                            data: [1, 2, 3, 4,3]
+                            data: [9, 10, 5]
                         },
                     ]
                 },{
@@ -162,22 +151,22 @@
                         'axisLabel': {
                             'interval': 0
                         },
-                        data: ["金币1","金币2","金币3","金币4"],
+                        data: ["草书", "行书", "楷书"],
                         splitLine: {
                             show: false
                         }
                     }],
                     title: {
-                        text: '小兔子的金币库'
+                        text: '魏晋南北朝书法作品研究资料汇总'
                     },
                     series: [{
-                            data: [1, 2,9, 4]
+                            data: [9, 8, 6]
                         },
                         {
-                            data: [1, 2, 4, 4]
+                            data: [5, 12, 5]
                         },
                         {
-                            data: [1, 4, 3, 4]
+                            data: [4, 10, 2]
                         },
                     ]
                 },
@@ -187,22 +176,22 @@
                         'axisLabel': {
                             'interval': 0
                         },
-                        data: ["b", "a", "c", "d"],
+                        data: ["草书", "行书", "楷书"],
                         splitLine: {
                             show: false
                         }
                     }],
                     title: {
-                        text: 'Java的金币库'
+                        text: '隋唐宋书法作品研究资料汇总'
                     },
                     series: [{
-                            data: [1, 2, 3, 4]
+                            data: [20, 35, 20]
                         },
                         {
-                            data: [1, 2, 3, 4]
+                            data: [15, 20, 10]
                         },
                         {
-                            data: [1, 2, 3, 4]
+                            data: [10, 15, 10]
                         },
                     ]
                 },{
@@ -211,22 +200,22 @@
                         'axisLabel': {
                             'interval': 0
                         },
-                        data: ["b", "a", "c", "d"],
+                        data: ["草书", "行书", "楷书"],
                         splitLine: {
                             show: false
                         }
                     }],
                     title: {
-                        text: 'c#的金币库'
+                        text: '元明清书法作品研究资料汇总'
                     },
                     series: [{
-                            data: [1, 2, 3, 4]
+                            data: [30, 35, 24]
                         },
                         {
-                            data: [1, 2, 3, 4]
+                            data: [28, 30, 13]
                         },
                         {
-                            data: [1, 2, 3, 4]
+                            data: [27, 19, 17]
                         },
                     ]
                 },{
@@ -235,22 +224,22 @@
                         'axisLabel': {
                             'interval': 0
                         },
-                        data: ["b", "a", "c", "d"],
+                        data: ["草书", "行书", "楷书"],
                         splitLine: {
                             show: false
                         }
                     }],
                     title: {
-                        text: 'c#的金币库'
+                        text: '当代书法作品研究资料汇总'
                     },
                     series: [{
-                            data: [1, 2, 3, 4]
+                            data: [28, 35, 20]
                         },
                         {
-                            data: [1, 2, 3, 4]
+                            data: [19, 25, 16]
                         },
                         {
-                            data: [1, 2, 3, 4]
+                            data: [17, 15, 10]
                         },
                     ]
                 }

@@ -13,7 +13,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>ECharts</title>
+    <title>书法资料统计</title>
     <!-- 引入 echarts.js -->
     <script src="{{ url_for('static', filename='echarts.min.js') }}"></script>  
     <script src="{{ url_for('static', filename='jquery-3.3.1.js') }}"></script>
@@ -23,7 +23,7 @@
 </head>
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 2050px;height:1200px;"></div>
+    <div id="main" style="width: 1850px;height:890px;"></div>
     <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('main'));
         /*注：源码就是下面这些，只要复制到开发工具就行，然后把
@@ -664,7 +664,7 @@
         var str = "";
         var data = [];
         var geoCoordMap_pie = {};
-        var name = "书法资料统计"
+        var name = "各省市有关书法研究资料的汇总"
         var mapName = 'china'
         // 地图特征
         var mapFeatures = echarts.getMap(mapName).geoJson.features;
