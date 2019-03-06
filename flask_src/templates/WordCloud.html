@@ -1,0 +1,510 @@
+<!--
+<!doctype html>
+<title>Ontology Visualization</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<div align="center" class="search">
+    <form method="post">
+        <input type="text" name="search" id="searchInput" required>
+        <input type="submit" id="searchSubmit" value="搜索">
+    </form>
+</div>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>书法作品词云</title>
+    <!-- 引入 echarts.js -->
+    <script src="{{ url_for('static', filename='echarts.min.js') }}"></script>  
+    <script src="{{ url_for('static', filename='jquery-3.3.1.js') }}"></script>
+    <script type="text/javascript" src="http://data-visual.cn/datav/src/js/echarts/extension/echarts-wordcloud.min.js"></script>
+    
+    
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 2050px;height:1050px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        option = {
+            title: {
+                text: '书法作品分析',
+                link: 'https://www.baidu.com/s?wd=' + encodeURIComponent('ECharts'),
+                x: 'center',
+                textStyle: {
+                    fontSize: 23
+                }
+
+            },
+            backgroundColor: '#F7F7F7',
+            tooltip: {
+                show: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {
+                        iconStyle: {
+                            normal: {
+                                color: '#FFFFFF'
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: '书法作品分析',
+                type: 'wordCloud',
+                //size: ['9%', '99%'],
+                sizeRange: [6, 66],
+                //textRotation: [0, 45, 90, -45],
+                rotationRange: [-45, 90],
+                //shape: 'circle',
+                textPadding: 0,
+                autoSize: {
+                    enable: true,
+                    minSize: 6
+                },
+                textStyle: {
+                    normal: {
+                        color: function() {
+                            return 'rgb(' + [
+                                Math.round(Math.random() * 160),
+                                Math.round(Math.random() * 160),
+                                Math.round(Math.random() * 160)
+                            ].join(',') + ')';
+                        }
+                    },
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowColor: '#333'
+                    }
+                },
+                data: [{
+                    name: "兰亭集序",
+                    value: 1998
+                }, {
+                    name: "砥柱铭卷",
+                    value: 1462
+                }]
+            }]
+        };
+
+        var JosnList = [];
+
+        JosnList.push({
+            name: "兰亭集序",
+            value: 1998
+        }, {
+            name: "砥柱铭卷",
+            value: 1462
+        }, {
+            name: "鹅群帖",
+            value: "489"
+        }, {
+            name: "公衮帖",
+            value: "893"
+        }, {
+            name: "洛神赋十三行",
+            value: "687"
+        }, {
+            name: "九歌",
+            value: "982"
+        }, {
+            name: "为牟成甫乞米帖",
+            value: "588"
+        }, {
+            name: "平江路重脩儒學記",
+            value: "892"
+        }, {
+            name: "玄都坛歌",
+            value: "515"
+        }, {
+            name: "昨日诸愿帖",
+            value: "483"
+        }, {
+            name: "小园帖",
+            value: "906"
+        }, {
+            name: "此诸贤帖",
+            value: "872"
+        }, {
+            name: "画马歌册",
+            value: "429"
+        }, {
+            name: "醉翁亭记",
+            value: "708"
+        }, {
+            name: "圣谕碑原稿",
+            value: "406"
+        }, {
+            name: "明妃曲",
+            value: "504"
+        }, {
+            name: "自书诗卷",
+            value: "763"
+        }, {
+            name: "天马赋",
+            value: "385"
+        }, {
+            name: "萧闲堂",
+            value: "678"
+        }, {
+            name: "刘明仲墨竹赋",
+            value: "355"
+        }, {
+            name: "颜师古·幽兰赋",
+            value: "986"
+        }, {
+            name: "长寿庵咏梅诗",
+            value: "680"
+        }, {
+            name: "乡石帖",
+            value: "985"
+        }, {
+            name: "来戏帖",
+            value: "684"
+        }, {
+            name: "道场诗帖",
+            value: "456"
+        }, {
+            name: "宁万寿禅寺碑",
+            value: "875"
+        }, {
+            name: "韩滉五牛图卷",
+            value: "582"
+        }, {
+            name: "趵突泉诗",
+            value: "698"
+        }, {
+            name: "汉汲黯传",
+            value: "741"
+        }, {
+            name: "淮云通上人化缘序",
+            value: "254"
+        }, {
+            name: "千字文",
+            value: "253"
+        }, {
+            name: "颜书郭公碑",
+            value: "658"
+        }, {
+            name: "龙兴寺碑",
+            value: "378"
+        }, {
+            name: "李公墓志",
+            value: "543"
+        }, {
+            name: "玄秘塔碑",
+            value: "389"
+        }, {
+            name: "张留孙墓碑",
+            value: "223"
+        }, {
+            name: "祭侄季明文稿",
+            value: "1578"
+        }, {
+            name: "高峰和尚行状",
+            value: "689"
+        }, {
+            name: "麻姑仙坛记",
+            value: "578"
+        }, {
+            name: "司徒刘沔神道碑銘",
+            value: "963"
+        }, {
+            name: "赵文敏庐山草堂记",
+            value: "547"
+        }, {
+            name: "松江宝云寺记",
+            value: "267"
+        }, {
+            name: "神策军碑",
+            value: "345"
+        }, {
+            name: "集柳碑",
+            value: "564"
+        }, {
+            name: "赤壁二赋帖",
+            value: "532"
+        }, {
+            name: "崑山州淮云院记",
+            value: "496"
+        }, {
+            name: "欧阳修憎苍蝇赋",
+            value: "241"
+        }, {
+            name: "憎苍蝇赋",
+            value: "111"
+        }, {
+            name: "致季博札",
+            value: "147"
+        }, {
+            name: "兰惹帖",
+            value: "472"
+        }, {
+            name: "虞恭公温彦博碑",
+            value: "472"
+        }, {
+            name: "杂书帖选",
+            value: "472"
+        }, {
+            name: "多宝塔碑",
+            value: "472"
+        }, {
+            name: "圣慈帖",
+            value: "472"
+        }, {
+            name: "急就章卷",
+            value: "472"
+        }, {
+            name: "天冠山题咏诗帖",
+            value: "472"
+        }, {
+            name: "观音殿记",
+            value: "92"
+        }, {
+            name: "拆迁政策咨询",
+            value: "92"
+        }, {
+            name: "北陇耕云书卷",
+            value: "92"
+        }, {
+            name: "病来月余帖",
+            value: "92"
+        }, {
+            name: "郭家庙碑",
+            value: "92"
+        }, {
+            name: "清遠道士詩",
+            value: "92"
+        }, {
+            name: "不自弃文",
+            value: "72"
+        }, {
+            name: "臧怀恪碑",
+            value: "254"
+        }, {
+            name: "惠书帖",
+            value: "453"
+        }, {
+            name: "论书帖",
+            value: "458"
+        }, {
+            name: "松雪书马说",
+            value: "71"
+        }, {
+            name: "长歌行",
+            value: "71"
+        }, {
+            name: "勤礼碑",
+            value: "658"
+        }, {
+            name: "书马伏波语",
+            value: "71"
+        }, {
+            name: "海赋",
+            value: "487"
+        }, {
+            name: "八关斋功德记",
+            value: "771"
+        }, {
+            name: "赵文敏公书白雪斋诗",
+            value: "671"
+        }, {
+            name: "行宫记",
+            value: "71"
+        }, {
+            name: "唐福林寺戒塔铭",
+            value: "971"
+        }, {
+            name: "绍兴路增置义田之记",
+            value: "871"
+        }, {
+            name: "庶子泉石篆诗册",
+            value: "671"
+        }, {
+            name: "欧阳询九成宫醴泉铭碑",
+            value: "71"
+        }, {
+            name: "李成寒鸦图卷",
+            value: "271"
+        }, {
+            name: "题桃源图",
+            value: "371"
+        }, {
+            name: "魏谟先庙碑",
+            value: "41"
+        }, {
+            name: "保母志碑",
+            value: "141"
+        }, {
+            name: "泾县尹承务苏公政绩碑",
+            value: "241"
+        }, {
+            name: "论裴行俭书法",
+            value: "241"
+        }, {
+            name: "跋洛神赋十三行",
+            value: "241"
+        }, {
+            name: "跋郭熙树石平远图",
+            value: "241"
+        }, {
+            name: "襄阳歌",
+            value: "241"
+        }, {
+            name: "赠和州刺史张敬因碑",
+            value: "241"
+        }, {
+            name: "久疏上状帖",
+            value: "41"
+        }, {
+            name: "前岁到杭帖",
+            value: "241"
+        }, {
+            name: "逍遥楼刻石",
+            value: "21"
+        }, {
+            name: "唐颜鲁公书祭侄稿帖",
+            value: "21"
+        }, {
+            name: "郭敬之家庙碑",
+            value: "689"
+        }, {
+            name: "鲜于氏离堆记",
+            value: "258"
+        }, {
+            name: "徐州都督房彦谦碑",
+            value: "753"
+        }, {
+            name: "颜勤礼碑",
+            value: "684"
+        }, {
+            name: "泥甚帖",
+            value: "894"
+        }, {
+            name: "休书帖",
+            value: "47"
+        }, {
+            name: "平安帖",
+            value: "47"
+        }, {
+            name: "由余帖",
+            value: "587"
+        }, {
+            name: "薄冷帖",
+            value: "47"
+        }, {
+            name: "闲邪公家传",
+            value: "954"
+        }, {
+            name: "忠义堂帖",
+            value: "509"
+        }, {
+            name: "殷纣帖",
+            value: "408"
+        }, {
+            name: "赵吴兴罗汉赞",
+            value: "47"
+        }, {
+            name: "颜真卿多宝塔",
+            value: "47"
+        }, {
+            name: "容州都督元结碑",
+            value: "47"
+        }, {
+            name: "脚气帖",
+            value: "47"
+        }, {
+            name: "与郭仆射书",
+            value: "47"
+        }, {
+            name: "杭州龙井山方圆庵记碑",
+            value: "47"
+        }, {
+            name: "萧闲堂",
+            value: "47"
+        }, {
+            name: "杜甫桤木诗卷帖",
+            value: "47"
+        }, {
+            name: "天马赋",
+            value: "47"
+        }, {
+            name: "刘明仲墨竹赋",
+            value: "47"
+        }, {
+            name: "狄梁公碑",
+            value: "47"
+        }, {
+            name: "来戏帖",
+            value: "47"
+        }, {
+            name: "黄鲁直书大江东词",
+            value: "47"
+        }, {
+            name: "晋纸帖",
+            value: "47"
+        }, {
+            name: "黄州寒食帖",
+            value: "47"
+        }, {
+            name: "月虹馆法书",
+            value: "47"
+        }, {
+            name: "醉翁亭记",
+            value: "47"
+        }, {
+            name: "易义帖",
+            value: "64"
+        }, {
+            name: "洛阳雨霁诗",
+            value: "64"
+        }, {
+            name: "王晋卿帖",
+            value: "53"
+        }, {
+            name: "游灵峰宝刹",
+            value: "90"
+        }, {
+            name: "奉和许给事夜直简诸公",
+            value: "47"
+        }, {
+            name: "论座帖",
+            value: "198"
+        }, {
+            name: "天马赋",
+            value: "247"
+        }, {
+            name: "省试腊后望春宫",
+            value: "74"
+        }, {
+            name: "与天民知命书",
+            value: "69"
+        }, {
+            name: "与云夫七弟得书",
+            value: "471"
+        }, {
+            name: "糟姜帖",
+            value: "84"
+        }, {
+            name: "书王定国藏王晋卿烟江叠嶂图一首",
+            value: "141"
+        }, {
+            name: "滕王阁序",
+            value: "91"
+        }, {
+            name: "海月都师帖",
+            value: "181"
+        });
+
+        option.series[0].data = JosnList;
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);        
+
+        
+    </script>
+</body>
+</html>
