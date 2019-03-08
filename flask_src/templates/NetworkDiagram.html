@@ -23,7 +23,7 @@
 </head>
 <body>
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="width: 2050px;height:1050px;"></div>
+    <div id="main" style="width: 1950px;height:980px;"></div>
     <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('main'));
         option = {
@@ -44,22 +44,19 @@
             legend: { // 图例显示（显示在右上角），name:类别名称，icon:图例的形状（默认是roundRect圆角矩形）。
                 show: true,
                 data: [{
-                        name: '欧体'
+                        name: '魏晋南北朝'
                     },
                     {
-                        name: '颜体'
+                        name: '隋唐'
                     },
                     {
-                        name: '柳体'
-                    },
-                    {
-                        name: '赵体'
+                        name: '宋元'
                     }
                 ]
             },
             series: [{
                 type: 'graph', // 关系图
-                name: '影响因子:', // 系列名称，用于tooltip的显示，legend 的图例筛选，在 setOption 更新数据和配置项时用于指定对应的系列。
+                name: '影响力:', // 系列名称，用于tooltip的显示，legend 的图例筛选，在 setOption 更新数据和配置项时用于指定对应的系列。
                 layout: 'force', // 图的布局，类型为力导图，'circular' 采用环形布局，见示例 Les Miserables
                 legendHoverLink: true, // 是否启用图例 hover(悬停) 时的联动高亮。
                 hoverAnimation: true, // 是否开启鼠标悬停节点的显示动画
@@ -145,16 +142,13 @@
                 },
                 categories: [ // name(类别名称)要同legend(图例）按次序一致
                     {
-                        name: '欧体'
+                        name: '魏晋南北朝'
                     },
                     {
-                        name: '颜体'
+                        name: '隋唐'
                     },
                     {
-                        name: '柳体'
-                    },
-                    {
-                        name: '赵体'
+                        name: '宋元'
                     }
                 ],
                 // 设置结点node的数据
@@ -165,4467 +159,445 @@
                 // symbol: 类目节点标记图形，默然为圆形
                 // label: 标签样式
                 data: [{
-                        category: '欧体',
-                        name: '九成宫书法',
-                        value: 1475,
-                        symbolSize: 114
-                    },
-                    {
-                        category: '欧体',
-                        name: '化度寺碑',
-                        value: 55,
-                        symbolSize: 19
-                    },
-                    {
-                        category: '欧体',
-                        name: '九歌',
-                        value: 986,
-                        symbolSize: 81
-                    },
-                    {
-                        category: '柳体',
-                        name: '心经',
-                        value: 106,
-                        symbolSize: 23
-                    },
-                    {
-                        category: '柳体',
-                        name: '玄秘塔碑',
-                        value: 68,
-                        symbolSize: 20
-                    },
-                    {
-                        category: '柳体',
-                        name: '唐福林寺戒塔铭',
-                        value: 289,
+                        category: '魏晋南北朝',
+                        name: '钟繇',
+                        value: 100,
                         symbolSize: 35
                     },
                     {
-                        category: '柳体',
-                        name: '天宁万寿禅寺碑',
-                        value: 542,
-                        symbolSize: 52
+                        category: '魏晋南北朝',
+                        name: '卫夫人',
+                        value: 200,
+                        symbolSize: 50
                     },
                     {
-                        category: '颜体',
-                        name: '军神',
-                        value: 390,
-                        symbolSize: 41
+                        category: '魏晋南北朝',
+                        name: '王羲之',
+                        value: 400,
+                        symbolSize: 100
                     },
                     {
-                        category: '柳体',
-                        name: '金刚般若波罗蜜经',
-                        value: 160,
-                        symbolSize: 26
+                        category: '魏晋南北朝',
+                        name: '王献之',
+                        value: 200,
+                        symbolSize: 50
                     },
                     {
-                        category: '赵体',
-                        name: '陈一江',
-                        value: 15,
-                        symbolSize: 16
+                        category: '魏晋南北朝',
+                        name: '智永',
+                        value: 110,
+                        symbolSize: 35
                     },
                     {
-                        category: '颜体',
-                        name: '余逢',
-                        value: 49,
-                        symbolSize: 19
+                        category: '魏晋南北朝',
+                        name: '王涣之',
+                        value: 140,
+                        symbolSize: 40
                     },
                     {
-                        category: '颜体',
-                        name: '莱克',
-                        value: 185,
-                        symbolSize: 28
+                        category: '魏晋南北朝',
+                        name: '王玄之',
+                        value: 120,
+                        symbolSize: 39
+                    },
+                                        {
+                        category: '魏晋南北朝',
+                        name: '王微之',
+                        value: 100,
+                        symbolSize: 35
+                    },
+                                        {
+                        category: '魏晋南北朝',
+                        name: '王凝之',
+                        value: 100,
+                        symbolSize: 35
                     },
                     {
-                        category: '柳体',
-                        name: '跋洛神赋十三行',
-                        value: 145,
-                        symbolSize: 25
+                        category: '隋唐',
+                        name: '虞世南',
+                        value: 120,
+                        symbolSize: 35
                     },
                     {
-                        category: '柳体',
-                        name: '钟烟花',
-                        value: 398,
-                        symbolSize: 42
+                        category: '隋唐',
+                        name: '欧阳询',
+                        value: 230,
+                        symbolSize: 53
                     },
                     {
-                        category: '颜体',
-                        name: '五人小组',
-                        value: 91,
-                        symbolSize: 22
+                        category: '隋唐',
+                        name: '褚遂良',
+                        value: 200,
+                        symbolSize: 100
                     },
                     {
-                        category: '赵体',
-                        name: '周瑾',
-                        value: 30,
-                        symbolSize: 17
+                        category: '隋唐',
+                        name: '张旭',
+                        value: 110,
+                        symbolSize: 35
                     },
                     {
-                        category: '赵体',
-                        name: '王猛',
-                        value: 11,
-                        symbolSize: 16
+                        category: '隋唐',
+                        name: '颜真卿',
+                        value: 350,
+                        symbolSize: 83
                     },
                     {
-                        category: '柳体',
-                        name: '张小萌',
-                        value: 672,
+                        category: '隋唐',
+                        name: '怀素',
+                        value: 120,
+                        symbolSize: 45
+                    },
+                    {
+                        category: '隋唐',
+                        name: '李邕',
+                        value: 280,
+                        symbolSize: 75
+                    },
+                    {
+                        category: '隋唐',
+                        name: '杨凝式',
+                        value: 130,
+                        symbolSize: 45
+                    },
+                    {
+                        category: '隋唐',
+                        name: '薛曜',
+                        value: 100,
+                        symbolSize: 35
+                    },
+                    {
+                        category: '隋唐',
+                        name: '薛稷',
+                        value: 100,
+                        symbolSize: 35
+                    },
+                    {
+                        category: '隋唐',
+                        name: '段季展',
+                        value: 100,
+                        symbolSize: 35
+                    },
+                    {
+                        category: '隋唐',
+                        name: '沈传师',
+                        value: 110,
+                        symbolSize: 35
+                    },
+                    {
+                        category: '隋唐',
+                        name: '柳公权',
+                        value: 190,
+                        symbolSize: 45
+                    },
+                    {
+                        category: '宋元',
+                        name: '范成大',
+                        value: 100,
+                        symbolSize: 35
+                    },
+                    {
+                        category: '宋元',
+                        name: '朱熹',
+                        value: 200,
+                        symbolSize: 50
+                    },
+                    {
+                        category: '宋元',
+                        name: '赵孟頫',
+                        value: 230,
+                        symbolSize: 55
+                    },
+                    {
+                        category: '宋元',
+                        name: '管道升',
+                        value: 90,
+                        symbolSize: 30
+                    },
+                    {
+                        category: '宋元',
+                        name: '米芾',
+                        value: 370,
+                        symbolSize: 85
+                    },
+                    {
+                        category: '宋元',
+                        name: '苏东坡',
+                        value: 100,
+                        symbolSize: 39
+                    },
+                    {
+                        category: '宋元',
+                        name: '欧阳修',
+                        value: 250,
                         symbolSize: 60
                     },
                     {
-                        category: '柳体',
-                        name: '施清海',
-                        value: 1328,
-                        symbolSize: 104
-                    },
-                    {
-                        category: '颜体',
-                        name: '乔治卡林',
-                        value: 159,
-                        symbolSize: 26
-                    },
-                    {
-                        category: '柳体',
-                        name: '郁子',
-                        value: 41,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '颜体',
-                        name: '邹侑',
-                        value: 90,
-                        symbolSize: 21
-                    },
-                    {
-                        category: '柳体',
-                        name: '邹郁',
-                        value: 1102,
-                        symbolSize: 89
-                    },
-                    {
-                        category: '颜体',
-                        name: '公子哥',
-                        value: 94,
-                        symbolSize: 22
-                    },
-                    {
-                        category: '颜体',
-                        name: '邹应星',
-                        value: 133,
-                        symbolSize: 24
-                    },
-                    {
-                        category: '柳体',
-                        name: '邰之源',
-                        value: 1221,
-                        symbolSize: 97
-                    },
-                    {
-                        category: '颜体',
-                        name: '小叔',
-                        value: 49,
-                        symbolSize: 19
-                    },
-                    {
-                        category: '颜体',
-                        name: '李匹夫',
-                        value: 377,
-                        symbolSize: 41
-                    },
-                    {
-                        category: '颜体',
-                        name: '邰夫人',
-                        value: 416,
-                        symbolSize: 43
-                    },
-                    {
-                        category: '颜体',
-                        name: '靳管家',
-                        value: 220,
-                        symbolSize: 30
-                    },
-                    {
-                        category: '柳体',
-                        name: '海清舟',
-                        value: 28,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '颜体',
-                        name: '老东西',
-                        value: 299,
-                        symbolSize: 35
-                    },
-                    {
-                        category: '赵体',
-                        name: '白琪',
-                        value: 54,
-                        symbolSize: 19
-                    },
-                    {
-                        category: '赵体',
-                        name: '安达',
-                        value: 39,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '颜体',
-                        name: '周玉',
-                        value: 391,
-                        symbolSize: 42
-                    },
-                    {
-                        category: '颜体',
-                        name: '老家伙',
-                        value: 63,
-                        symbolSize: 20
-                    },
-                    {
-                        category: '颜体',
-                        name: '南水',
-                        value: 57,
-                        symbolSize: 19
-                    },
-                    {
-                        category: '柳体',
-                        name: '钟夫人',
-                        value: 107,
-                        symbolSize: 23
-                    },
-                    {
-                        category: '柳体',
-                        name: '何英',
-                        value: 38,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '柳体',
-                        name: '白玉兰',
-                        value: 1209,
-                        symbolSize: 96
-                    },
-                    {
-                        category: '颜体',
-                        name: '桐姐',
-                        value: 128,
-                        symbolSize: 24
-                    },
-                    {
-                        category: '颜体',
-                        name: '罗斯',
-                        value: 60,
-                        symbolSize: 19
-                    },
-                    {
-                        category: '柳体',
-                        name: '国民少女',
-                        value: 169,
-                        symbolSize: 27
-                    },
-                    {
-                        category: '赵体',
-                        name: '薛乃印',
-                        value: 20,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '柳体',
-                        name: '何塞',
-                        value: 127,
-                        symbolSize: 24
-                    },
-                    {
-                        category: '颜体',
-                        name: '朴志镐',
-                        value: 144,
-                        symbolSize: 25
-                    },
-                    {
-                        category: '颜体',
-                        name: '利孝通',
-                        value: 402,
-                        symbolSize: 42
-                    },
-                    {
-                        category: '左天星',
-                        name: '大妈',
-                        value: 52,
-                        symbolSize: 19
-                    },
-                    {
-                        category: '柳体',
-                        name: '沈老',
-                        value: 261,
-                        symbolSize: 33
-                    },
-                    {
-                        category: '柳体',
-                        name: '沈裕林',
-                        value: 23,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '颜体',
-                        name: '利七少',
-                        value: 51,
-                        symbolSize: 19
-                    },
-                    {
-                        category: '颜体',
-                        name: '林半山',
-                        value: 308,
-                        symbolSize: 36
-                    },
-                    {
-                        category: '颜体',
-                        name: '元帅',
-                        value: 104,
-                        symbolSize: 22
-                    },
-                    {
-                        category: '颜体',
-                        name: '李封',
-                        value: 460,
-                        symbolSize: 46
-                    },
-                    {
-                        category: '颜体',
-                        name: '利修竹',
-                        value: 175,
-                        symbolSize: 27
-                    },
-                    {
-                        category: '颜体',
-                        name: '利家大少爷',
-                        value: 18,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '赵体',
-                        name: '曾哥',
-                        value: 34,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '赵体',
-                        name: '海伦',
-                        value: 19,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '赵体',
-                        name: '徐松子',
-                        value: 88,
-                        symbolSize: 21
-                    },
-                    {
-                        category: '颜体',
-                        name: '沈大秘书',
-                        value: 34,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '赵体',
-                        name: '王玄',
-                        value: 18,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '柳体',
-                        name: '南相美',
-                        value: 198,
-                        symbolSize: 29
-                    },
-                    {
-                        category: '赵体',
-                        name: '张小花',
-                        value: 49,
-                        symbolSize: 19
-                    },
-                    {
-                        category: '颜体',
-                        name: '利大少爷',
-                        value: 4,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '颜体',
-                        name: '林斗海',
-                        value: 166,
-                        symbolSize: 27
-                    },
-                    {
-                        category: '颜体',
-                        name: '孔叔',
-                        value: 52,
-                        symbolSize: 19
-                    },
-                    {
-                        category: '颜体',
-                        name: '林家老太爷',
-                        value: 3,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '颜体',
-                        name: '迈尔斯',
-                        value: 126,
-                        symbolSize: 24
-                    },
-                    {
-                        category: '颜体',
-                        name: '阿源',
-                        value: 17,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '柳体',
-                        name: '兰晓龙',
-                        value: 277,
-                        symbolSize: 34
-                    },
-                    {
-                        category: '柳体',
-                        name: '商秋',
-                        value: 410,
-                        symbolSize: 43
-                    },
-                    {
-                        category: '柳体',
-                        name: '伍德',
-                        value: 189,
-                        symbolSize: 28
-                    },
-                    {
-                        category: '柳体',
-                        name: '鲍勃',
-                        value: 224,
-                        symbolSize: 30
-                    },
-                    {
-                        category: '赵体',
-                        name: '洪予良',
-                        value: 23,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '赵体',
-                        name: '孔武',
-                        value: 18,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '颜体',
-                        name: '利缘宫',
-                        value: 73,
-                        symbolSize: 20
-                    },
-                    {
-                        category: '颜体',
-                        name: '席勒',
-                        value: 103,
-                        symbolSize: 22
-                    },
-                    {
-                        category: '颜体',
-                        name: '可姐',
-                        value: 26,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '颜体',
-                        name: '邰局长',
-                        value: 39,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '柳体',
-                        name: '熊临泉',
-                        value: 483,
+                        category: '宋元',
+                        name: '赵佶',
+                        value: 240,
                         symbolSize: 48
                     },
                     {
-                        category: '柳体',
-                        name: '老白',
-                        value: 75,
-                        symbolSize: 20
+                        category: '宋元',
+                        name: '赵构',
+                        value: 110,
+                        symbolSize: 39
                     },
                     {
-                        category: '柳体',
-                        name: '刘佼',
-                        value: 70,
-                        symbolSize: 20
+                        category: '宋元',
+                        name: '黄庭坚',
+                        value: 190,
+                        symbolSize: 41
                     },
                     {
-                        category: '柳体',
-                        name: '花小司',
-                        value: 74,
-                        symbolSize: 20
+                        category: '宋元',
+                        name: '蔡襄',
+                        value: 130,
+                        symbolSize: 39
                     },
                     {
-                        category: '柳体',
-                        name: '顾惜风',
-                        value: 220,
-                        symbolSize: 30
-                    },
-                    {
-                        category: '柳体',
-                        name: '林爱',
-                        value: 18,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '柳体',
-                        name: '赫雷',
-                        value: 137,
-                        symbolSize: 25
-                    },
-                    {
-                        category: '柳体',
-                        name: '弥塞留',
-                        value: 9,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '赵体',
-                        name: '易副司令',
-                        value: 27,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '颜体',
-                        name: '邰老',
-                        value: 41,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '颜体',
-                        name: '南明秀',
-                        value: 62,
-                        symbolSize: 20
-                    },
-                    {
-                        category: '柳体',
-                        name: '田大棒',
-                        value: 63,
-                        symbolSize: 20
-                    },
-                    {
-                        category: '颜体',
-                        name: '南相夫人',
-                        value: 27,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '赵体',
-                        name: '叶小桐',
-                        value: 11,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '颜体',
-                        name: '钟子期',
-                        value: 122,
-                        symbolSize: 24
-                    },
-                    {
-                        category: '颜体',
-                        name: '钟家二少爷',
-                        value: 10,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '赵体',
-                        name: '洪予静',
-                        value: 17,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '赵体',
-                        name: '纳尔逊中将',
-                        value: 13,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '赵体',
-                        name: '颜丙燕',
-                        value: 31,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '赵体',
-                        name: '柳青松',
-                        value: 4,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '柳体',
-                        name: '萧十三楼',
-                        value: 31,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '柳体',
-                        name: '达文西',
-                        value: 206,
-                        symbolSize: 29
-                    },
-                    {
-                        category: '赵体',
-                        name: '牛得录',
-                        value: 15,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '柳体',
-                        name: '钟瘦虎',
-                        value: 166,
-                        symbolSize: 27
-                    },
-                    {
-                        category: '赵体',
-                        name: '白泽明',
-                        value: 31,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '柳体',
-                        name: '于澄海',
-                        value: 65,
-                        symbolSize: 20
-                    },
-                    {
-                        category: '赵体',
-                        name: '栗明',
-                        value: 23,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '赵体',
-                        name: '帕黛儿',
-                        value: 19,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '赵体',
-                        name: '柯以宁',
-                        value: 7,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '赵体',
-                        name: '李飞绒',
-                        value: 26,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '柳体',
-                        name: '何大律师',
-                        value: 13,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '颜体',
-                        name: '纳斯里',
-                        value: 43,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '颜体',
-                        name: '钟家老太爷',
-                        value: 8,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '颜体',
-                        name: '曹秋道',
-                        value: 15,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '赵体',
-                        name: '田行天',
-                        value: 18,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '颜体',
-                        name: '金求德',
-                        value: 38,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '颜体',
-                        name: '李小山',
-                        value: 12,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '柳体',
-                        name: '菲利浦',
-                        value: 204,
-                        symbolSize: 29
-                    },
-                    {
-                        category: '赵体',
-                        name: '韩楚',
-                        value: 49,
-                        symbolSize: 19
-                    },
-                    {
-                        category: '赵体',
-                        name: '温斯基',
-                        value: 17,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '赵体',
-                        name: '阿兹拉',
-                        value: 42,
-                        symbolSize: 18
-                    },
-                    {
-                        category: '赵体',
-                        name: '钱承同',
-                        value: 16,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '赵体',
-                        name: '胡狮',
-                        value: 7,
-                        symbolSize: 16
-                    },
-                    {
-                        category: '赵体',
-                        name: '林惜花',
-                        value: 16,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '赵体',
-                        name: '江锦',
-                        value: 22,
-                        symbolSize: 17
-                    },
-                    {
-                        category: '赵体',
-                        name: '胡宗华',
-                        value: 10,
-                        symbolSize: 16
+                        category: '宋元',
+                        name: '周越',
+                        value: 100,
+                        symbolSize: 35
                     }
+
                 ],
                 links: [ // 设置连线edges的数据
                     {
-                        source: '九成宫书法',
-                        target: '心经',
-                        value: 437
+                        source: '卫夫人',
+                        target: '钟繇',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '玄秘塔碑',
-                        value: 29
+                        source: '王羲之',
+                        target: '卫夫人',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '天宁万寿禅寺碑',
-                        value: 329
+                        source: '王献之',
+                        target: '王羲之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '余逢',
-                        value: 24
+                        source: '王涣之',
+                        target: '王羲之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '金刚般若波罗蜜经',
-                        value: 102
+                        source: '王凝之',
+                        target: '王羲之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '钟烟花',
-                        value: 153
+                        source: '王玄之',
+                        target: '王羲之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '周瑾',
-                        value: 18
+                        source: '王微之',
+                        target: '王羲之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '张小萌',
-                        value: 405
+                        source: '智永',
+                        target: '王涣之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '郁子',
-                        value: 11
+                        source: '虞世南',
+                        target: '智永',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '乔治卡林',
-                        value: 37
+                        source: '欧阳询',
+                        target: '虞世南',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '靳管家',
-                        value: 81
+                        source: '褚遂良',
+                        target: '欧阳询',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '海清舟',
-                        value: 25
+                        source: '张旭',
+                        target: '褚遂良',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '麦德林',
-                        value: 267
+                        source: '颜真卿',
+                        target: '张旭',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '公子哥',
-                        value: 40
+                        source: '怀素',
+                        target: '颜真卿',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '周玉',
-                        value: 201
+                        source: '杨凝式',
+                        target: '怀素',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '帕布尔',
-                        value: 201
+                        source: '杨凝式',
+                        target: '欧阳询',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '钟夫人',
-                        value: 73
+                        source: '杨凝式',
+                        target: '颜真卿',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '国民少女',
-                        value: 68
+                        source: '杨凝式',
+                        target: '王羲之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '薛乃印',
-                        value: 8
+                        source: '杨凝式',
+                        target: '王献之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '沈离',
-                        value: 22
+                        source: '管道生',
+                        target: '赵孟頫',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '邰夫人',
-                        value: 149
+                        source: '赵孟頫',
+                        target: '钟繇',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '何塞',
-                        value: 72
+                        source: '赵孟頫',
+                        target: '李邕',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '利孝通',
-                        value: 225
+                        source: '李邕',
+                        target: '王羲之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '大妈',
-                        value: 33
+                        source: '李邕',
+                        target: '王献之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '沈老',
-                        value: 188
+                        source: '苏东坡',
+                        target: '李邕',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '沈裕林',
-                        value: 11
+                        source: '米芾',
+                        target: '李邕',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '罗斯',
-                        value: 10
+                        source: '赵佶',
+                        target: '褚遂良',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '利七少',
-                        value: 37
+                        source: '赵佶',
+                        target: '薛曜',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '利修竹',
-                        value: 65
+                        source: '薛曜',
+                        target: '褚遂良',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '林半山',
-                        value: 75
+                        source: '薛稷',
+                        target: '褚遂良',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '曾哥',
-                        value: 31
+                        source: '薛稷',
+                        target: '薛曜',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '利家大少爷',
-                        value: 10
+                        source: '朱熹',
+                        target: '钟繇',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '老家伙',
-                        value: 18
+                        source: '朱熹',
+                        target: '颜真卿',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '安全顾问',
-                        value: 14
+                        source: '欧阳修',
+                        target: '颜真卿',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '张小花',
-                        value: 7
+                        source: '欧阳修',
+                        target: '怀素',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '焦秘书',
-                        value: 9
+                        source: '欧阳修',
+                        target: '欧阳询',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '商秋',
-                        value: 175
+                        source: '欧阳修',
+                        target: '李邕',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '林远湖',
-                        value: 40
+                        source: '欧阳修',
+                        target: '蔡襄',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '李封',
-                        value: 109
+                        source: '米芾',
+                        target: '段季展',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '李匹夫',
-                        value: 119
+                        source: '米芾',
+                        target: '沈传师',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '小叔',
-                        value: 26
+                        source: '米芾',
+                        target: '褚遂良',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '席勒',
-                        value: 24
+                        source: '米芾',
+                        target: '欧阳修',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '可姐',
-                        value: 12
+                        source: '柳公权',
+                        target: '欧阳询',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '老东西',
-                        value: 130
+                        source: '柳公权',
+                        target: '颜真卿',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '利缘宫',
-                        value: 9
+                        source: '柳公权',
+                        target: '王羲之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '布林',
-                        value: 19
+                        source: '赵构',
+                        target: '米芾',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '熊临泉',
-                        value: 167
+                        source: '赵构',
+                        target: '黄庭坚',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '老白',
-                        value: 29
+                        source: '黄庭坚',
+                        target: '王羲之',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '元帅',
-                        value: 25
+                        source: '黄庭坚',
+                        target: '杨凝式',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '南水',
-                        value: 5
+                        source: '黄庭坚',
+                        target: '苏轼',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '杜少卿',
-                        value: 327
+                        source: '黄庭坚',
+                        target: '周越',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '邰局长',
-                        value: 7
+                        source: '蔡襄',
+                        target: '周越',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '崔聚冬',
-                        value: 25
+                        source: '米芾',
+                        target: '周越',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '南明秀',
-                        value: 42
+                        source: '周越',
+                        target: '段季展',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '叶小桐',
-                        value: 6
+                        source: '管道升',
+                        target: '赵孟頫',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '钟子期',
-                        value: 40
+                        source: '范成大',
+                        target: '黄庭坚',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '钟家二少爷',
-                        value: 4
+                        source: '范成大',
+                        target: '蔡襄',
                     },
                     {
-                        source: '九成宫书法',
-                        target: '颜丙燕',
-                        value: 9
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '达文西',
-                        value: 24
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '萧十三楼',
-                        value: 4
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '牛得录',
-                        value: 10
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '赫雷',
-                        value: 27
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '白泽明',
-                        value: 9
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '于澄海',
-                        value: 13
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '亚瑟',
-                        value: 4
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '东方玉',
-                        value: 38
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '田大棒',
-                        value: 8
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '屠夫',
-                        value: 6
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '纳斯里',
-                        value: 13
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '白槿',
-                        value: 8
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '沃斯',
-                        value: 19
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '何大律师',
-                        value: 7
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '曹秋道',
-                        value: 4
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '帕黛儿',
-                        value: 4
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '金求德',
-                        value: 4
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '菲利浦',
-                        value: 67
-                    },
-                    {
-                        source: '九成宫书法',
-                        target: '秋叶原',
-                        value: 3
-                    },
-                    {
-                        source: '化度寺碑',
-                        target: '心经',
-                        value: 4
-                    },
-                    {
-                        source: '化度寺碑',
-                        target: '九成宫书法',
-                        value: 24
-                    },
-                    {
-                        source: '心经',
-                        target: '张小萌',
-                        value: 14
-                    },
-                    {
-                        source: '心经',
-                        target: '公子哥',
-                        value: 4
-                    },
-                    {
-                        source: '心经',
-                        target: '桐姐',
-                        value: 53
-                    },
-                    {
-                        source: '心经',
-                        target: '国民少女',
-                        value: 60
-                    },
-                    {
-                        source: '心经',
-                        target: '席勒',
-                        value: 3
-                    },
-                    {
-                        source: '心经',
-                        target: '兰晓龙',
-                        value: 5
-                    },
-                    {
-                        source: '心经',
-                        target: '李在道',
-                        value: 7
-                    },
-                    {
-                        source: '心经',
-                        target: '李匹夫',
-                        value: 9
-                    },
-                    {
-                        source: '心经',
-                        target: '元帅',
-                        value: 3
-                    },
-                    {
-                        source: '心经',
-                        target: '南相美',
-                        value: 7
-                    },
-                    {
-                        source: '心经',
-                        target: '商秋',
-                        value: 11
-                    },
-                    {
-                        source: '心经',
-                        target: '帕布尔',
-                        value: 5
-                    },
-                    {
-                        source: '心经',
-                        target: '九成宫书法',
-                        value: 51
-                    },
-                    {
-                        source: '心经',
-                        target: '唐福林寺戒塔铭',
-                        value: 9
-                    },
-                    {
-                        source: '心经',
-                        target: '帕布尔',
-                        value: 4
-                    },
-                    {
-                        source: '心经',
-                        target: '施清海',
-                        value: 3
-                    },
-                    {
-                        source: '心经',
-                        target: '钟瘦虎',
-                        value: 7
-                    },
-                    {
-                        source: '心经',
-                        target: '李在道',
-                        value: 3
-                    },
-                    {
-                        source: '心经',
-                        target: '苏珊大妈',
-                        value: 3
-                    },
-                    {
-                        source: '玄秘塔碑',
-                        target: '心经',
-                        value: 28
-                    },
-                    {
-                        source: '玄秘塔碑',
-                        target: '李封',
-                        value: 3
-                    },
-                    {
-                        source: '玄秘塔碑',
-                        target: '国民少女',
-                        value: 4
-                    },
-                    {
-                        source: '唐福林寺戒塔铭',
-                        target: '化度寺碑',
-                        value: 11
-                    },
-                    {
-                        source: '唐福林寺戒塔铭',
-                        target: '九成宫书法',
-                        value: 173
-                    },
-                    {
-                        source: '唐福林寺戒塔铭',
-                        target: '天宁万寿禅寺碑',
-                        value: 7
-                    },
-                    {
-                        source: '唐福林寺戒塔铭',
-                        target: '邹郁',
-                        value: 3
-                    },
-                    {
-                        source: '唐福林寺戒塔铭',
-                        target: '林半山',
-                        value: 21
-                    },
-                    {
-                        source: '唐福林寺戒塔铭',
-                        target: '钟夫人',
-                        value: 6
-                    },
-                    {
-                        source: '唐福林寺戒塔铭',
-                        target: '钟烟花',
-                        value: 3
-                    },
-                    {
-                        source: '唐福林寺戒塔铭',
-                        target: '利七少',
-                        value: 8
-                    },
-                    {
-                        source: '唐福林寺戒塔铭',
-                        target: '李飞绒',
-                        value: 4
-                    },
-                    {
-                        source: '天宁万寿禅寺碑',
-                        target: '心经',
-                        value: 8
-                    },
-                    {
-                        source: '天宁万寿禅寺碑',
-                        target: '莱克',
-                        value: 8
-                    },
-                    {
-                        source: '天宁万寿禅寺碑',
-                        target: '军神',
-                        value: 15
-                    },
-                    {
-                        source: '天宁万寿禅寺碑',
-                        target: '邹郁',
-                        value: 5
-                    },
-                    {
-                        source: '天宁万寿禅寺碑',
-                        target: '沈老',
-                        value: 14
-                    },
-                    {
-                        source: '天宁万寿禅寺碑',
-                        target: '白玉兰',
-                        value: 4
-                    },
-                    {
-                        source: '天宁万寿禅寺碑',
-                        target: '心经',
-                        value: 4
-                    },
-                    {
-                        source: '天宁万寿禅寺碑',
-                        target: '乔治卡林',
-                        value: 6
-                    },
-                    {
-                        source: '天宁万寿禅寺碑',
-                        target: '怀草诗',
-                        value: 15
-                    },
-                    {
-                        source: '军神',
-                        target: '九成宫书法',
-                        value: 140
-                    },
-                    {
-                        source: '军神',
-                        target: '李匹夫',
-                        value: 139
-                    },
-                    {
-                        source: '军神',
-                        target: '利孝通',
-                        value: 3
-                    },
-                    {
-                        source: '军神',
-                        target: '林半山',
-                        value: 6
-                    },
-                    {
-                        source: '军神',
-                        target: '周玉',
-                        value: 5
-                    },
-                    {
-                        source: '军神',
-                        target: '兰晓龙',
-                        value: 6
-                    },
-                    {
-                        source: '军神',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '军神',
-                        target: '元帅',
-                        value: 7
-                    },
-                    {
-                        source: '军神',
-                        target: '心经',
-                        value: 20
-                    },
-                    {
-                        source: '军神',
-                        target: '麦德林',
-                        value: 3
-                    },
-                    {
-                        source: '军神',
-                        target: '帕布尔',
-                        value: 12
-                    },
-                    {
-                        source: '军神',
-                        target: '跋洛神赋十三行',
-                        value: 4
-                    },
-                    {
-                        source: '军神',
-                        target: '怀草诗',
-                        value: 4
-                    },
-                    {
-                        source: '金刚般若波罗蜜经',
-                        target: '施清海',
-                        value: 3
-                    },
-                    {
-                        source: '金刚般若波罗蜜经',
-                        target: '钟夫人',
-                        value: 5
-                    },
-                    {
-                        source: '余逢',
-                        target: '天宁万寿禅寺碑',
-                        value: 6
-                    },
-                    {
-                        source: '余逢',
-                        target: '莱克',
-                        value: 7
-                    },
-                    {
-                        source: '余逢',
-                        target: '乔治卡林',
-                        value: 4
-                    },
-                    {
-                        source: '安全顾问',
-                        target: '林半山',
-                        value: 4
-                    },
-                    {
-                        source: '莱克',
-                        target: '唐福林寺戒塔铭',
-                        value: 3
-                    },
-                    {
-                        source: '莱克',
-                        target: '九成宫书法',
-                        value: 62
-                    },
-                    {
-                        source: '莱克',
-                        target: '帕布尔',
-                        value: 3
-                    },
-                    {
-                        source: '跋洛神赋十三行',
-                        target: '莱克',
-                        value: 3
-                    },
-                    {
-                        source: '跋洛神赋十三行',
-                        target: '九成宫书法',
-                        value: 42
-                    },
-                    {
-                        source: '跋洛神赋十三行',
-                        target: '帕布尔',
-                        value: 3
-                    },
-                    {
-                        source: '跋洛神赋十三行',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '跋洛神赋十三行',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '跋洛神赋十三行',
-                        target: '田大棒',
-                        value: 3
-                    },
-                    {
-                        source: '钟烟花',
-                        target: '金刚般若波罗蜜经',
-                        value: 30
-                    },
-                    {
-                        source: '钟烟花',
-                        target: '跋洛神赋十三行',
-                        value: 3
-                    },
-                    {
-                        source: '钟烟花',
-                        target: '南相美',
-                        value: 8
-                    },
-                    {
-                        source: '钟烟花',
-                        target: '田大棒',
-                        value: 8
-                    },
-                    {
-                        source: '钟烟花',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '钟烟花',
-                        target: '李在道',
-                        value: 3
-                    },
-                    {
-                        source: '钟烟花',
-                        target: '南相夫人',
-                        value: 3
-                    },
-                    {
-                        source: '钟烟花',
-                        target: '邹郁',
-                        value: 8
-                    },
-                    {
-                        source: '钟烟花',
-                        target: '大妈',
-                        value: 5
-                    },
-                    {
-                        source: '钟烟花',
-                        target: '大师范',
-                        value: 15
-                    },
-                    {
-                        source: '五人小组',
-                        target: '九成宫书法',
-                        value: 24
-                    },
-                    {
-                        source: '五人小组',
-                        target: '军神',
-                        value: 6
-                    },
-                    {
-                        source: '王猛',
-                        target: '周瑾',
-                        value: 4
-                    },
-                    {
-                        source: '王猛',
-                        target: '九成宫书法',
-                        value: 4
-                    },
-                    {
-                        source: '张小萌',
-                        target: '施清海',
-                        value: 93
-                    },
-                    {
-                        source: '张小萌',
-                        target: '天宁万寿禅寺碑',
-                        value: 5
-                    },
-                    {
-                        source: '张小萌',
-                        target: '麦德林',
-                        value: 56
-                    },
-                    {
-                        source: '张小萌',
-                        target: '乔治卡林',
-                        value: 6
-                    },
-                    {
-                        source: '张小萌',
-                        target: '海清舟',
-                        value: 19
-                    },
-                    {
-                        source: '张小萌',
-                        target: '邰之源',
-                        value: 31
-                    },
-                    {
-                        source: '张小萌',
-                        target: '邰夫人',
-                        value: 3
-                    },
-                    {
-                        source: '张小萌',
-                        target: '唐福林寺戒塔铭',
-                        value: 3
-                    },
-                    {
-                        source: '张小萌',
-                        target: '沈老',
-                        value: 4
-                    },
-                    {
-                        source: '张小萌',
-                        target: '白玉兰',
-                        value: 3
-                    },
-                    {
-                        source: '张小萌',
-                        target: '南水',
-                        value: 7
-                    },
-                    {
-                        source: '张小萌',
-                        target: '利修竹',
-                        value: 3
-                    },
-                    {
-                        source: '施清海',
-                        target: '九成宫书法',
-                        value: 660
-                    },
-                    {
-                        source: '施清海',
-                        target: '邹郁',
-                        value: 124
-                    },
-                    {
-                        source: '施清海',
-                        target: '邹应星',
-                        value: 3
-                    },
-                    {
-                        source: '施清海',
-                        target: '帕布尔',
-                        value: 34
-                    },
-                    {
-                        source: '施清海',
-                        target: '乔治卡林',
-                        value: 10
-                    },
-                    {
-                        source: '施清海',
-                        target: '唐福林寺戒塔铭',
-                        value: 5
-                    },
-                    {
-                        source: '施清海',
-                        target: '天宁万寿禅寺碑',
-                        value: 3
-                    },
-                    {
-                        source: '施清海',
-                        target: '老东西',
-                        value: 6
-                    },
-                    {
-                        source: '施清海',
-                        target: '周玉',
-                        value: 5
-                    },
-                    {
-                        source: '施清海',
-                        target: '靳管家',
-                        value: 13
-                    },
-                    {
-                        source: '施清海',
-                        target: '心经',
-                        value: 9
-                    },
-                    {
-                        source: '施清海',
-                        target: '南水',
-                        value: 6
-                    },
-                    {
-                        source: '施清海',
-                        target: '薛乃印',
-                        value: 3
-                    },
-                    {
-                        source: '施清海',
-                        target: '国民少女',
-                        value: 3
-                    },
-                    {
-                        source: '施清海',
-                        target: '邰夫人',
-                        value: 4
-                    },
-                    {
-                        source: '施清海',
-                        target: '利修竹',
-                        value: 3
-                    },
-                    {
-                        source: '施清海',
-                        target: '利孝通',
-                        value: 3
-                    },
-                    {
-                        source: '施清海',
-                        target: '王玄',
-                        value: 7
-                    },
-                    {
-                        source: '施清海',
-                        target: '五人小组',
-                        value: 4
-                    },
-                    {
-                        source: '施清海',
-                        target: '沈老',
-                        value: 3
-                    },
-                    {
-                        source: '施清海',
-                        target: '可姐',
-                        value: 4
-                    },
-                    {
-                        source: '施清海',
-                        target: '杜少卿',
-                        value: 15
-                    },
-                    {
-                        source: '施清海',
-                        target: '军神',
-                        value: 4
-                    },
-                    {
-                        source: '施清海',
-                        target: '南明秀',
-                        value: 5
-                    },
-                    {
-                        source: '施清海',
-                        target: '顾惜风',
-                        value: 9
-                    },
-                    {
-                        source: '施清海',
-                        target: '拜伦',
-                        value: 15
-                    },
-                    {
-                        source: '施清海',
-                        target: '席勒',
-                        value: 3
-                    },
-                    {
-                        source: '施清海',
-                        target: '莱克',
-                        value: 3
-                    },
-                    {
-                        source: '施清海',
-                        target: '李在道',
-                        value: 5
-                    },
-                    {
-                        source: '乔治卡林',
-                        target: '麦德林',
-                        value: 30
-                    },
-                    {
-                        source: '乔治卡林',
-                        target: '邰之源',
-                        value: 5
-                    },
-                    {
-                        source: '乔治卡林',
-                        target: '鲍勃',
-                        value: 4
-                    },
-                    {
-                        source: '乔治卡林',
-                        target: '伍德',
-                        value: 5
-                    },
-                    {
-                        source: '乔治卡林',
-                        target: '李匹夫',
-                        value: 6
-                    },
-                    {
-                        source: '郁子',
-                        target: '施清海',
-                        value: 3
-                    },
-                    {
-                        source: '邹侑',
-                        target: '九成宫书法',
-                        value: 39
-                    },
-                    {
-                        source: '邹侑',
-                        target: '施清海',
-                        value: 15
-                    },
-                    {
-                        source: '邹侑',
-                        target: '邹郁',
-                        value: 29
-                    },
-                    {
-                        source: '邹郁',
-                        target: '九成宫书法',
-                        value: 547
-                    },
-                    {
-                        source: '邹郁',
-                        target: '邰之源',
-                        value: 63
-                    },
-                    {
-                        source: '邹郁',
-                        target: '郁子',
-                        value: 9
-                    },
-                    {
-                        source: '邹郁',
-                        target: '靳管家',
-                        value: 3
-                    },
-                    {
-                        source: '邹郁',
-                        target: '麦德林',
-                        value: 14
-                    },
-                    {
-                        source: '邹郁',
-                        target: '张小萌',
-                        value: 27
-                    },
-                    {
-                        source: '邹郁',
-                        target: '邰夫人',
-                        value: 38
-                    },
-                    {
-                        source: '邹郁',
-                        target: '利孝通',
-                        value: 31
-                    },
-                    {
-                        source: '邹郁',
-                        target: '邹应星',
-                        value: 6
-                    },
-                    {
-                        source: '邹郁',
-                        target: '乔治卡林',
-                        value: 5
-                    },
-                    {
-                        source: '邹郁',
-                        target: '沈老',
-                        value: 12
-                    },
-                    {
-                        source: '邹郁',
-                        target: '李封',
-                        value: 8
-                    },
-                    {
-                        source: '邹郁',
-                        target: '军神',
-                        value: 6
-                    },
-                    {
-                        source: '邹郁',
-                        target: '帕布尔',
-                        value: 3
-                    },
-                    {
-                        source: '邹郁',
-                        target: '熊临泉',
-                        value: 3
-                    },
-                    {
-                        source: '邹郁',
-                        target: '白玉兰',
-                        value: 5
-                    },
-                    {
-                        source: '邹郁',
-                        target: '心经',
-                        value: 12
-                    },
-                    {
-                        source: '邹郁',
-                        target: '怀草诗',
-                        value: 6
-                    },
-                    {
-                        source: '邹郁',
-                        target: '鲍勃',
-                        value: 5
-                    },
-                    {
-                        source: '邹应星',
-                        target: '九成宫书法',
-                        value: 41
-                    },
-                    {
-                        source: '邹应星',
-                        target: '帕布尔',
-                        value: 4
-                    },
-                    {
-                        source: '邹应星',
-                        target: '安全顾问',
-                        value: 9
-                    },
-                    {
-                        source: '邹应星',
-                        target: '焦秘书',
-                        value: 6
-                    },
-                    {
-                        source: '邹应星',
-                        target: '军神',
-                        value: 5
-                    },
-                    {
-                        source: '邹应星',
-                        target: '李匹夫',
-                        value: 3
-                    },
-                    {
-                        source: '邹应星',
-                        target: '迈尔斯',
-                        value: 12
-                    },
-                    {
-                        source: '邹应星',
-                        target: '麦德林',
-                        value: 4
-                    },
-                    {
-                        source: '邹应星',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '邹应星',
-                        target: '杜少卿',
-                        value: 3
-                    },
-                    {
-                        source: '邹应星',
-                        target: '李在道',
-                        value: 3
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '南水',
-                        value: 13
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '罗斯',
-                        value: 13
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '元帅',
-                        value: 7
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '乔治卡林',
-                        value: 16
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '拜伦',
-                        value: 16
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '安全顾问',
-                        value: 7
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '邰局长',
-                        value: 4
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '崔聚冬',
-                        value: 5
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '洪予良',
-                        value: 5
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '利缘宫',
-                        value: 4
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '鲍勃',
-                        value: 14
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '伍德',
-                        value: 8
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '公子哥',
-                        value: 4
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '钟瘦虎',
-                        value: 8
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '李在道',
-                        value: 32
-                    },
-                    {
-                        source: '帕布尔',
-                        target: '笛卡尔',
-                        value: 4
-                    },
-                    {
-                        source: '邰之源',
-                        target: '帕布尔',
-                        value: 66
-                    },
-                    {
-                        source: '邰之源',
-                        target: '九成宫书法',
-                        value: 595
-                    },
-                    {
-                        source: '邰之源',
-                        target: '邹侑',
-                        value: 7
-                    },
-                    {
-                        source: '邰之源',
-                        target: '郁子',
-                        value: 14
-                    },
-                    {
-                        source: '邰之源',
-                        target: '邰夫人',
-                        value: 35
-                    },
-                    {
-                        source: '邰之源',
-                        target: '施清海',
-                        value: 62
-                    },
-                    {
-                        source: '邰之源',
-                        target: '天宁万寿禅寺碑',
-                        value: 4
-                    },
-                    {
-                        source: '邰之源',
-                        target: '心经',
-                        value: 21
-                    },
-                    {
-                        source: '邰之源',
-                        target: '麦德林',
-                        value: 28
-                    },
-                    {
-                        source: '邰之源',
-                        target: '桐姐',
-                        value: 5
-                    },
-                    {
-                        source: '邰之源',
-                        target: '唐福林寺戒塔铭',
-                        value: 5
-                    },
-                    {
-                        source: '邰之源',
-                        target: '杨劲松',
-                        value: 6
-                    },
-                    {
-                        source: '邰之源',
-                        target: '林半山',
-                        value: 10
-                    },
-                    {
-                        source: '邰之源',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '邰之源',
-                        target: '白玉兰',
-                        value: 7
-                    },
-                    {
-                        source: '邰之源',
-                        target: '李匹夫',
-                        value: 4
-                    },
-                    {
-                        source: '邰之源',
-                        target: '跋洛神赋十三行',
-                        value: 4
-                    },
-                    {
-                        source: '邰之源',
-                        target: '何英',
-                        value: 7
-                    },
-                    {
-                        source: '邰之源',
-                        target: '何大律师',
-                        value: 4
-                    },
-                    {
-                        source: '邰之源',
-                        target: '钟烟花',
-                        value: 3
-                    },
-                    {
-                        source: '邰之源',
-                        target: '杜少卿',
-                        value: 5
-                    },
-                    {
-                        source: '邰之源',
-                        target: '鲍勃',
-                        value: 10
-                    },
-                    {
-                        source: '麦德林',
-                        target: '施清海',
-                        value: 71
-                    },
-                    {
-                        source: '麦德林',
-                        target: '老东西',
-                        value: 3
-                    },
-                    {
-                        source: '麦德林',
-                        target: '帕布尔',
-                        value: 80
-                    },
-                    {
-                        source: '麦德林',
-                        target: '南水',
-                        value: 7
-                    },
-                    {
-                        source: '麦德林',
-                        target: '老家伙',
-                        value: 7
-                    },
-                    {
-                        source: '麦德林',
-                        target: '利修竹',
-                        value: 23
-                    },
-                    {
-                        source: '麦德林',
-                        target: '海伦',
-                        value: 11
-                    },
-                    {
-                        source: '麦德林',
-                        target: '杨劲松',
-                        value: 7
-                    },
-                    {
-                        source: '麦德林',
-                        target: '心经',
-                        value: 5
-                    },
-                    {
-                        source: '麦德林',
-                        target: '林远湖',
-                        value: 19
-                    },
-                    {
-                        source: '麦德林',
-                        target: '安全顾问',
-                        value: 3
-                    },
-                    {
-                        source: '麦德林',
-                        target: '利缘宫',
-                        value: 6
-                    },
-                    {
-                        source: '麦德林',
-                        target: '可姐',
-                        value: 3
-                    },
-                    {
-                        source: '麦德林',
-                        target: '杜少卿',
-                        value: 4
-                    },
-                    {
-                        source: '麦德林',
-                        target: '李在道',
-                        value: 5
-                    },
-                    {
-                        source: '麦德林',
-                        target: '跋洛神赋十三行',
-                        value: 3
-                    },
-                    {
-                        source: '麦德林',
-                        target: '屠夫',
-                        value: 4
-                    },
-                    {
-                        source: '麦德林',
-                        target: '卡顿',
-                        value: 4
-                    },
-                    {
-                        source: '小叔',
-                        target: '李封',
-                        value: 10
-                    },
-                    {
-                        source: '小叔',
-                        target: '李在道',
-                        value: 8
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '邰夫人',
-                        value: 8
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '李封',
-                        value: 13
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '麦德林',
-                        value: 6
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '元帅',
-                        value: 9
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '帕布尔',
-                        value: 8
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '施清海',
-                        value: 4
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '天宁万寿禅寺碑',
-                        value: 32
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '五人小组',
-                        value: 5
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '怀夫差',
-                        value: 4
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '纳斯里',
-                        value: 5
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '李匹夫',
-                        target: '余逢',
-                        value: 3
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '麦德林',
-                        value: 27
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '靳管家',
-                        value: 24
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '帕布尔',
-                        value: 26
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '军神',
-                        value: 8
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '林半山',
-                        value: 6
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '阿源',
-                        value: 5
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '唐福林寺戒塔铭',
-                        value: 8
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '心经',
-                        value: 8
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '林远湖',
-                        value: 4
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '老家伙',
-                        value: 3
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '心经',
-                        value: 5
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '郁子',
-                        value: 3
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '李在道',
-                        value: 6
-                    },
-                    {
-                        source: '邰夫人',
-                        target: '大师范',
-                        value: 8
-                    },
-                    {
-                        source: '靳管家',
-                        target: '邰之源',
-                        value: 84
-                    },
-                    {
-                        source: '靳管家',
-                        target: '帕布尔',
-                        value: 7
-                    },
-                    {
-                        source: '靳管家',
-                        target: '白琪',
-                        value: 9
-                    },
-                    {
-                        source: '靳管家',
-                        target: '张小萌',
-                        value: 4
-                    },
-                    {
-                        source: '靳管家',
-                        target: '麦德林',
-                        value: 3
-                    },
-                    {
-                        source: '靳管家',
-                        target: '杨劲松',
-                        value: 4
-                    },
-                    {
-                        source: '靳管家',
-                        target: '余逢',
-                        value: 5
-                    },
-                    {
-                        source: '靳管家',
-                        target: '沈离',
-                        value: 3
-                    },
-                    {
-                        source: '靳管家',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '靳管家',
-                        target: '沈大秘书',
-                        value: 3
-                    },
-                    {
-                        source: '海清舟',
-                        target: '邹郁',
-                        value: 8
-                    },
-                    {
-                        source: '老东西',
-                        target: '白玉兰',
-                        value: 3
-                    },
-                    {
-                        source: '老东西',
-                        target: '五人小组',
-                        value: 5
-                    },
-                    {
-                        source: '老东西',
-                        target: '心经',
-                        value: 8
-                    },
-                    {
-                        source: '老东西',
-                        target: '邰之源',
-                        value: 3
-                    },
-                    {
-                        source: '老东西',
-                        target: '席勒',
-                        value: 5
-                    },
-                    {
-                        source: '白琪',
-                        target: '邰之源',
-                        value: 11
-                    },
-                    {
-                        source: '白琪',
-                        target: '九成宫书法',
-                        value: 15
-                    },
-                    {
-                        source: '安达',
-                        target: '周玉',
-                        value: 22
-                    },
-                    {
-                        source: '安达',
-                        target: '九成宫书法',
-                        value: 9
-                    },
-                    {
-                        source: '周玉',
-                        target: '邰之源',
-                        value: 7
-                    },
-                    {
-                        source: '周玉',
-                        target: '邰夫人',
-                        value: 5
-                    },
-                    {
-                        source: '周玉',
-                        target: '邹郁',
-                        value: 6
-                    },
-                    {
-                        source: '周玉',
-                        target: '兰晓龙',
-                        value: 12
-                    },
-                    {
-                        source: '周玉',
-                        target: '周瑾',
-                        value: 6
-                    },
-                    {
-                        source: '周玉',
-                        target: '杜少卿',
-                        value: 42
-                    },
-                    {
-                        source: '老家伙',
-                        target: '林半山',
-                        value: 5
-                    },
-                    {
-                        source: '南水',
-                        target: '南明秀',
-                        value: 6
-                    },
-                    {
-                        source: '南水',
-                        target: '元帅',
-                        value: 3
-                    },
-                    {
-                        source: '钟夫人',
-                        target: '邰夫人',
-                        value: 5
-                    },
-                    {
-                        source: '钟夫人',
-                        target: '钟烟花',
-                        value: 5
-                    },
-                    {
-                        source: '钟夫人',
-                        target: '跋洛神赋十三行',
-                        value: 3
-                    },
-                    {
-                        source: '何英',
-                        target: '心经',
-                        value: 5
-                    },
-                    {
-                        source: '何英',
-                        target: '九成宫书法',
-                        value: 10
-                    },
-                    {
-                        source: '何英',
-                        target: '金刚般若波罗蜜经',
-                        value: 3
-                    },
-                    {
-                        source: '杨劲松',
-                        target: '施清海',
-                        value: 8
-                    },
-                    {
-                        source: '杨劲松',
-                        target: '九成宫书法',
-                        value: 3
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '九成宫书法',
-                        value: 619
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '安全顾问',
-                        value: 3
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '公子哥',
-                        value: 5
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '金刚般若波罗蜜经',
-                        value: 3
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '帕布尔',
-                        value: 7
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '麦德林',
-                        value: 17
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '周玉',
-                        value: 29
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '薛乃印',
-                        value: 4
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '林斗海',
-                        value: 4
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '军神',
-                        value: 8
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '施清海',
-                        value: 12
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '李封',
-                        value: 7
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '老白',
-                        value: 14
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '杜少卿',
-                        value: 8
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '心经',
-                        value: 8
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '国民少女',
-                        value: 5
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '赫雷',
-                        value: 9
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '于澄海',
-                        value: 5
-                    },
-                    {
-                        source: '白玉兰',
-                        target: '东方玉',
-                        value: 5
-                    },
-                    {
-                        source: '桐姐',
-                        target: '九成宫书法',
-                        value: 66
-                    },
-                    {
-                        source: '桐姐',
-                        target: '玄秘塔碑',
-                        value: 4
-                    },
-                    {
-                        source: '桐姐',
-                        target: '利家大少爷',
-                        value: 5
-                    },
-                    {
-                        source: '桐姐',
-                        target: '国民少女',
-                        value: 7
-                    },
-                    {
-                        source: '罗斯',
-                        target: '麦德林',
-                        value: 76
-                    },
-                    {
-                        source: '罗斯',
-                        target: '利修竹',
-                        value: 4
-                    },
-                    {
-                        source: '罗斯',
-                        target: '林远湖',
-                        value: 5
-                    },
-                    {
-                        source: '国民少女',
-                        target: '军神',
-                        value: 5
-                    },
-                    {
-                        source: '国民少女',
-                        target: '李匹夫',
-                        value: 4
-                    },
-                    {
-                        source: '国民少女',
-                        target: '李封',
-                        value: 3
-                    },
-                    {
-                        source: '薛乃印',
-                        target: '邰之源',
-                        value: 4
-                    },
-                    {
-                        source: '沈离',
-                        target: '施清海',
-                        value: 10
-                    },
-                    {
-                        source: '沈离',
-                        target: '邰之源',
-                        value: 3
-                    },
-                    {
-                        source: '沈离',
-                        target: '邰夫人',
-                        value: 14
-                    },
-                    {
-                        source: '沈离',
-                        target: '麦德林',
-                        value: 7
-                    },
-                    {
-                        source: '沈离',
-                        target: '白玉兰',
-                        value: 3
-                    },
-                    {
-                        source: '何塞',
-                        target: '周玉',
-                        value: 25
-                    },
-                    {
-                        source: '何塞',
-                        target: '白玉兰',
-                        value: 9
-                    },
-                    {
-                        source: '朴志镐',
-                        target: '九成宫书法',
-                        value: 84
-                    },
-                    {
-                        source: '朴志镐',
-                        target: '周玉',
-                        value: 9
-                    },
-                    {
-                        source: '朴志镐',
-                        target: '邹郁',
-                        value: 5
-                    },
-                    {
-                        source: '朴志镐',
-                        target: '公子哥',
-                        value: 4
-                    },
-                    {
-                        source: '利孝通',
-                        target: '邰之源',
-                        value: 17
-                    },
-                    {
-                        source: '利孝通',
-                        target: '朴志镐',
-                        value: 20
-                    },
-                    {
-                        source: '利孝通',
-                        target: '邰夫人',
-                        value: 4
-                    },
-                    {
-                        source: '利孝通',
-                        target: '利家大少爷',
-                        value: 3
-                    },
-                    {
-                        source: '利孝通',
-                        target: '曾哥',
-                        value: 35
-                    },
-                    {
-                        source: '利孝通',
-                        target: '林半山',
-                        value: 18
-                    },
-                    {
-                        source: '利孝通',
-                        target: '麦德林',
-                        value: 3
-                    },
-                    {
-                        source: '利孝通',
-                        target: '公子哥',
-                        value: 4
-                    },
-                    {
-                        source: '利孝通',
-                        target: '白玉兰',
-                        value: 6
-                    },
-                    {
-                        source: '利孝通',
-                        target: '商秋',
-                        value: 3
-                    },
-                    {
-                        source: '利孝通',
-                        target: '利七少',
-                        value: 10
-                    },
-                    {
-                        source: '利孝通',
-                        target: '唐福林寺戒塔铭',
-                        value: 10
-                    },
-                    {
-                        source: '利孝通',
-                        target: '跋洛神赋十三行',
-                        value: 3
-                    },
-                    {
-                        source: '利孝通',
-                        target: '田大棒',
-                        value: 5
-                    },
-                    {
-                        source: '利孝通',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '利孝通',
-                        target: '何友友',
-                        value: 5
-                    },
-                    {
-                        source: '大妈',
-                        target: '怀草诗',
-                        value: 6
-                    },
-                    {
-                        source: '大妈',
-                        target: '大师范',
-                        value: 3
-                    },
-                    {
-                        source: '沈老',
-                        target: '罗斯',
-                        value: 3
-                    },
-                    {
-                        source: '沈老',
-                        target: '麦德林',
-                        value: 4
-                    },
-                    {
-                        source: '沈裕林',
-                        target: '沈老',
-                        value: 3
-                    },
-                    {
-                        source: '利七少',
-                        target: '邹郁',
-                        value: 5
-                    },
-                    {
-                        source: '林半山',
-                        target: '邹郁',
-                        value: 16
-                    },
-                    {
-                        source: '林半山',
-                        target: '林斗海',
-                        value: 11
-                    },
-                    {
-                        source: '林半山',
-                        target: '麦德林',
-                        value: 11
-                    },
-                    {
-                        source: '林半山',
-                        target: '张小花',
-                        value: 18
-                    },
-                    {
-                        source: '林半山',
-                        target: '杜少卿',
-                        value: 3
-                    },
-                    {
-                        source: '林半山',
-                        target: '韩楚',
-                        value: 13
-                    },
-                    {
-                        source: '林半山',
-                        target: '李在道',
-                        value: 5
-                    },
-                    {
-                        source: '元帅',
-                        target: '迈尔斯',
-                        value: 3
-                    },
-                    {
-                        source: '李封',
-                        target: '军神',
-                        value: 28
-                    },
-                    {
-                        source: '李封',
-                        target: '郁子',
-                        value: 4
-                    },
-                    {
-                        source: '李封',
-                        target: '邰夫人',
-                        value: 3
-                    },
-                    {
-                        source: '李封',
-                        target: '麦德林',
-                        value: 3
-                    },
-                    {
-                        source: '李封',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '李封',
-                        target: '钟子期',
-                        value: 21
-                    },
-                    {
-                        source: '李封',
-                        target: '心经',
-                        value: 15
-                    },
-                    {
-                        source: '李封',
-                        target: '跋洛神赋十三行',
-                        value: 11
-                    },
-                    {
-                        source: '李封',
-                        target: '桐姐',
-                        value: 6
-                    },
-                    {
-                        source: '李封',
-                        target: '李在道',
-                        value: 19
-                    },
-                    {
-                        source: '科学顾问',
-                        target: '安全顾问',
-                        value: 4
-                    },
-                    {
-                        source: '利修竹',
-                        target: '邰之源',
-                        value: 3
-                    },
-                    {
-                        source: '利修竹',
-                        target: '朴志镐',
-                        value: 10
-                    },
-                    {
-                        source: '利修竹',
-                        target: '利孝通',
-                        value: 22
-                    },
-                    {
-                        source: '利修竹',
-                        target: '邰夫人',
-                        value: 4
-                    },
-                    {
-                        source: '利修竹',
-                        target: '林远湖',
-                        value: 5
-                    },
-                    {
-                        source: '利修竹',
-                        target: '林斗海',
-                        value: 15
-                    },
-                    {
-                        source: '利修竹',
-                        target: '心经',
-                        value: 10
-                    },
-                    {
-                        source: '利修竹',
-                        target: '桐姐',
-                        value: 8
-                    },
-                    {
-                        source: '利家大少爷',
-                        target: '朴志镐',
-                        value: 4
-                    },
-                    {
-                        source: '利家大少爷',
-                        target: '利修竹',
-                        value: 5
-                    },
-                    {
-                        source: '曾哥',
-                        target: '利七少',
-                        value: 5
-                    },
-                    {
-                        source: '徐松子',
-                        target: '九成宫书法',
-                        value: 39
-                    },
-                    {
-                        source: '徐松子',
-                        target: '莱克',
-                        value: 8
-                    },
-                    {
-                        source: '沈大秘书',
-                        target: '九成宫书法',
-                        value: 10
-                    },
-                    {
-                        source: '沈大秘书',
-                        target: '邰夫人',
-                        value: 5
-                    },
-                    {
-                        source: '南相美',
-                        target: '九成宫书法',
-                        value: 68
-                    },
-                    {
-                        source: '南相美',
-                        target: '邹郁',
-                        value: 9
-                    },
-                    {
-                        source: '南相美',
-                        target: '林斗海',
-                        value: 14
-                    },
-                    {
-                        source: '南相美',
-                        target: '利孝通',
-                        value: 5
-                    },
-                    {
-                        source: '南相美',
-                        target: '张小萌',
-                        value: 5
-                    },
-                    {
-                        source: '南相美',
-                        target: '金刚般若波罗蜜经',
-                        value: 4
-                    },
-                    {
-                        source: '林斗海',
-                        target: '九成宫书法',
-                        value: 85
-                    },
-                    {
-                        source: '林斗海',
-                        target: '利七少',
-                        value: 6
-                    },
-                    {
-                        source: '林斗海',
-                        target: '利孝通',
-                        value: 16
-                    },
-                    {
-                        source: '林斗海',
-                        target: '公子哥',
-                        value: 3
-                    },
-                    {
-                        source: '林斗海',
-                        target: '李飞绒',
-                        value: 5
-                    },
-                    {
-                        source: '孔叔',
-                        target: '林斗海',
-                        value: 12
-                    },
-                    {
-                        source: '孔叔',
-                        target: '南相美',
-                        value: 4
-                    },
-                    {
-                        source: '孔叔',
-                        target: '九成宫书法',
-                        value: 23
-                    },
-                    {
-                        source: '孔叔',
-                        target: '白玉兰',
-                        value: 18
-                    },
-                    {
-                        source: '迈尔斯',
-                        target: '九成宫书法',
-                        value: 28
-                    },
-                    {
-                        source: '迈尔斯',
-                        target: '军神',
-                        value: 7
-                    },
-                    {
-                        source: '迈尔斯',
-                        target: '李匹夫',
-                        value: 6
-                    },
-                    {
-                        source: '迈尔斯',
-                        target: '林远湖',
-                        value: 4
-                    },
-                    {
-                        source: '迈尔斯',
-                        target: '麦德林',
-                        value: 6
-                    },
-                    {
-                        source: '迈尔斯',
-                        target: '帕布尔',
-                        value: 8
-                    },
-                    {
-                        source: '迈尔斯',
-                        target: '布林',
-                        value: 3
-                    },
-                    {
-                        source: '迈尔斯',
-                        target: '李在道',
-                        value: 7
-                    },
-                    {
-                        source: '焦秘书',
-                        target: '钟夫人',
-                        value: 4
-                    },
-                    {
-                        source: '焦秘书',
-                        target: '崔聚冬',
-                        value: 4
-                    },
-                    {
-                        source: '阿源',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '屠夫',
-                        target: '卡顿',
-                        value: 11
-                    },
-                    {
-                        source: '兰晓龙',
-                        target: '九成宫书法',
-                        value: 120
-                    },
-                    {
-                        source: '兰晓龙',
-                        target: '白玉兰',
-                        value: 60
-                    },
-                    {
-                        source: '兰晓龙',
-                        target: '何塞',
-                        value: 3
-                    },
-                    {
-                        source: '兰晓龙',
-                        target: '商秋',
-                        value: 4
-                    },
-                    {
-                        source: '兰晓龙',
-                        target: '杜少卿',
-                        value: 19
-                    },
-                    {
-                        source: '兰晓龙',
-                        target: '利修竹',
-                        value: 3
-                    },
-                    {
-                        source: '兰晓龙',
-                        target: '达文西',
-                        value: 4
-                    },
-                    {
-                        source: '商秋',
-                        target: '何塞',
-                        value: 19
-                    },
-                    {
-                        source: '商秋',
-                        target: '白玉兰',
-                        value: 10
-                    },
-                    {
-                        source: '商秋',
-                        target: '周玉',
-                        value: 5
-                    },
-                    {
-                        source: '商秋',
-                        target: '林斗海',
-                        value: 6
-                    },
-                    {
-                        source: '商秋',
-                        target: '利七少',
-                        value: 3
-                    },
-                    {
-                        source: '商秋',
-                        target: '邹郁',
-                        value: 11
-                    },
-                    {
-                        source: '商秋',
-                        target: '南相美',
-                        value: 14
-                    },
-                    {
-                        source: '商秋',
-                        target: '张小萌',
-                        value: 6
-                    },
-                    {
-                        source: '商秋',
-                        target: '熊临泉',
-                        value: 4
-                    },
-                    {
-                        source: '商秋',
-                        target: '钟烟花',
-                        value: 3
-                    },
-                    {
-                        source: '伍德',
-                        target: '鲍勃',
-                        value: 93
-                    },
-                    {
-                        source: '伍德',
-                        target: '麦德林',
-                        value: 17
-                    },
-                    {
-                        source: '伍德',
-                        target: '邹郁',
-                        value: 5
-                    },
-                    {
-                        source: '伍德',
-                        target: '九成宫书法',
-                        value: 11
-                    },
-                    {
-                        source: '伍德',
-                        target: '军神',
-                        value: 5
-                    },
-                    {
-                        source: '伍德',
-                        target: '邰之源',
-                        value: 13
-                    },
-                    {
-                        source: '鲍勃',
-                        target: '麦德林',
-                        value: 23
-                    },
-                    {
-                        source: '鲍勃',
-                        target: '九成宫书法',
-                        value: 20
-                    },
-                    {
-                        source: '鲍勃',
-                        target: '军神',
-                        value: 5
-                    },
-                    {
-                        source: '鲍勃',
-                        target: '元帅',
-                        value: 6
-                    },
-                    {
-                        source: '鲍勃',
-                        target: '施清海',
-                        value: 3
-                    },
-                    {
-                        source: '林远湖',
-                        target: '沈裕林',
-                        value: 5
-                    },
-                    {
-                        source: '林远湖',
-                        target: '商秋',
-                        value: 18
-                    },
-                    {
-                        source: '林远湖',
-                        target: '李封',
-                        value: 3
-                    },
-                    {
-                        source: '林远湖',
-                        target: '沈老',
-                        value: 10
-                    },
-                    {
-                        source: '林远湖',
-                        target: '帕布尔',
-                        value: 4
-                    },
-                    {
-                        source: '林远湖',
-                        target: '林半山',
-                        value: 4
-                    },
-                    {
-                        source: '林远湖',
-                        target: '林斗海',
-                        value: 6
-                    },
-                    {
-                        source: '林远湖',
-                        target: '张小萌',
-                        value: 4
-                    },
-                    {
-                        source: '布林',
-                        target: '帕布尔',
-                        value: 30
-                    },
-                    {
-                        source: '布林',
-                        target: '邰夫人',
-                        value: 3
-                    },
-                    {
-                        source: '孔武',
-                        target: '九成宫书法',
-                        value: 5
-                    },
-                    {
-                        source: '孔武',
-                        target: '林斗海',
-                        value: 12
-                    },
-                    {
-                        source: '利缘宫',
-                        target: '邰夫人',
-                        value: 6
-                    },
-                    {
-                        source: '利缘宫',
-                        target: '利修竹',
-                        value: 3
-                    },
-                    {
-                        source: '席勒',
-                        target: '五人小组',
-                        value: 5
-                    },
-                    {
-                        source: '拜伦',
-                        target: '崔聚冬',
-                        value: 6
-                    },
-                    {
-                        source: '拜伦',
-                        target: '九成宫书法',
-                        value: 17
-                    },
-                    {
-                        source: '拜伦',
-                        target: '杜少卿',
-                        value: 6
-                    },
-                    {
-                        source: '拜伦',
-                        target: '梅斯议员',
-                        value: 3
-                    },
-                    {
-                        source: '拜伦',
-                        target: '保尔森',
-                        value: 5
-                    },
-                    {
-                        source: '崔聚冬',
-                        target: '麦德林',
-                        value: 6
-                    },
-                    {
-                        source: '崔聚冬',
-                        target: '邹郁',
-                        value: 4
-                    },
-                    {
-                        source: '崔聚冬',
-                        target: '贝得曼',
-                        value: 3
-                    },
-                    {
-                        source: '崔聚冬',
-                        target: '林半山',
-                        value: 8
-                    },
-                    {
-                        source: '邰局长',
-                        target: '麦德林',
-                        value: 10
-                    },
-                    {
-                        source: '邰局长',
-                        target: '崔聚冬',
-                        value: 5
-                    },
-                    {
-                        source: '邰局长',
-                        target: '老东西',
-                        value: 3
-                    },
-                    {
-                        source: '熊临泉',
-                        target: '白玉兰',
-                        value: 60
-                    },
-                    {
-                        source: '熊临泉',
-                        target: '刘佼',
-                        value: 10
-                    },
-                    {
-                        source: '熊临泉',
-                        target: '兰晓龙',
-                        value: 18
-                    },
-                    {
-                        source: '熊临泉',
-                        target: '顾惜风',
-                        value: 27
-                    },
-                    {
-                        source: '熊临泉',
-                        target: '杜少卿',
-                        value: 6
-                    },
-                    {
-                        source: '熊临泉',
-                        target: '施清海',
-                        value: 5
-                    },
-                    {
-                        source: '熊临泉',
-                        target: '颜丙燕',
-                        value: 6
-                    },
-                    {
-                        source: '熊临泉',
-                        target: '达文西',
-                        value: 14
-                    },
-                    {
-                        source: '熊临泉',
-                        target: '赫雷',
-                        value: 10
-                    },
-                    {
-                        source: '熊临泉',
-                        target: '东方玉',
-                        value: 19
-                    },
-                    {
-                        source: '熊临泉',
-                        target: '秋叶原',
-                        value: 4
-                    },
-                    {
-                        source: '老白',
-                        target: '熊临泉',
-                        value: 13
-                    },
-                    {
-                        source: '老白',
-                        target: '顾惜风',
-                        value: 7
-                    },
-                    {
-                        source: '刘佼',
-                        target: '九成宫书法',
-                        value: 17
-                    },
-                    {
-                        source: '刘佼',
-                        target: '白玉兰',
-                        value: 10
-                    },
-                    {
-                        source: '刘佼',
-                        target: '兰晓龙',
-                        value: 11
-                    },
-                    {
-                        source: '刘佼',
-                        target: '老白',
-                        value: 4
-                    },
-                    {
-                        source: '刘佼',
-                        target: '顾惜风',
-                        value: 5
-                    },
-                    {
-                        source: '刘佼',
-                        target: '达文西',
-                        value: 7
-                    },
-                    {
-                        source: '花小司',
-                        target: '九成宫书法',
-                        value: 32
-                    },
-                    {
-                        source: '花小司',
-                        target: '周玉',
-                        value: 12
-                    },
-                    {
-                        source: '花小司',
-                        target: '赫雷',
-                        value: 14
-                    },
-                    {
-                        source: '花小司',
-                        target: '林爱',
-                        value: 10
-                    },
-                    {
-                        source: '花小司',
-                        target: '顾惜风',
-                        value: 5
-                    },
-                    {
-                        source: '花小司',
-                        target: '熊临泉',
-                        value: 3
-                    },
-                    {
-                        source: '顾惜风',
-                        target: '兰晓龙',
-                        value: 9
-                    },
-                    {
-                        source: '顾惜风',
-                        target: '九成宫书法',
-                        value: 52
-                    },
-                    {
-                        source: '顾惜风',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '顾惜风',
-                        target: '白玉兰',
-                        value: 15
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '邹郁',
-                        value: 7
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '李匹夫',
-                        value: 24
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '军神',
-                        value: 23
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '跋洛神赋十三行',
-                        value: 25
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '元帅',
-                        value: 9
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '迈尔斯',
-                        value: 6
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '李封',
-                        value: 22
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '天宁万寿禅寺碑',
-                        value: 9
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '帕布尔',
-                        value: 47
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '于澄海',
-                        value: 5
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '布林',
-                        value: 5
-                    },
-                    {
-                        source: '杜少卿',
-                        target: '胡链',
-                        value: 10
-                    },
-                    {
-                        source: '林爱',
-                        target: '九成宫书法',
-                        value: 4
-                    },
-                    {
-                        source: '林爱',
-                        target: '顾惜风',
-                        value: 4
-                    },
-                    {
-                        source: '赫雷',
-                        target: '弥塞留',
-                        value: 4
-                    },
-                    {
-                        source: '赫雷',
-                        target: '林爱',
-                        value: 10
-                    },
-                    {
-                        source: '赫雷',
-                        target: '顾惜风',
-                        value: 8
-                    },
-                    {
-                        source: '赫雷',
-                        target: '东方玉',
-                        value: 3
-                    },
-                    {
-                        source: '弥塞留',
-                        target: '林爱',
-                        value: 5
-                    },
-                    {
-                        source: '弥塞留',
-                        target: '花小司',
-                        value: 5
-                    },
-                    {
-                        source: '弥塞留',
-                        target: '九成宫书法',
-                        value: 3
-                    },
-                    {
-                        source: '易副司令',
-                        target: '九成宫书法',
-                        value: 6
-                    },
-                    {
-                        source: '李在道',
-                        target: '杜少卿',
-                        value: 33
-                    },
-                    {
-                        source: '李在道',
-                        target: '九成宫书法',
-                        value: 87
-                    },
-                    {
-                        source: '李在道',
-                        target: '元帅',
-                        value: 4
-                    },
-                    {
-                        source: '李在道',
-                        target: '军神',
-                        value: 23
-                    },
-                    {
-                        source: '李在道',
-                        target: '李匹夫',
-                        value: 12
-                    },
-                    {
-                        source: '李在道',
-                        target: '邹郁',
-                        value: 6
-                    },
-                    {
-                        source: '李在道',
-                        target: '拜伦',
-                        value: 9
-                    },
-                    {
-                        source: '李在道',
-                        target: '崔聚冬',
-                        value: 26
-                    },
-                    {
-                        source: '李在道',
-                        target: '布林',
-                        value: 6
-                    },
-                    {
-                        source: '李在道',
-                        target: '邰老',
-                        value: 3
-                    },
-                    {
-                        source: '李在道',
-                        target: '贝得曼',
-                        value: 5
-                    },
-                    {
-                        source: '李在道',
-                        target: '邰之源',
-                        value: 3
-                    },
-                    {
-                        source: '李在道',
-                        target: '大师范',
-                        value: 3
-                    },
-                    {
-                        source: '邰老',
-                        target: '九成宫书法',
-                        value: 8
-                    },
-                    {
-                        source: '邰老',
-                        target: '麦德林',
-                        value: 3
-                    },
-                    {
-                        source: '邰老',
-                        target: '崔聚冬',
-                        value: 7
-                    },
-                    {
-                        source: '邰老',
-                        target: '林半山',
-                        value: 5
-                    },
-                    {
-                        source: '南明秀',
-                        target: '张小萌',
-                        value: 23
-                    },
-                    {
-                        source: '南明秀',
-                        target: '利修竹',
-                        value: 3
-                    },
-                    {
-                        source: '南明秀',
-                        target: '公子哥',
-                        value: 3
-                    },
-                    {
-                        source: '南明秀',
-                        target: '林斗海',
-                        value: 13
-                    },
-                    {
-                        source: '南明秀',
-                        target: '钟子期',
-                        value: 5
-                    },
-                    {
-                        source: '田大棒',
-                        target: '林半山',
-                        value: 3
-                    },
-                    {
-                        source: '田大棒',
-                        target: '金刚般若波罗蜜经',
-                        value: 3
-                    },
-                    {
-                        source: '田大棒',
-                        target: '钟子期',
-                        value: 3
-                    },
-                    {
-                        source: '叶小桐',
-                        target: '心经',
-                        value: 3
-                    },
-                    {
-                        source: '钟子期',
-                        target: '跋洛神赋十三行',
-                        value: 10
-                    },
-                    {
-                        source: '钟子期',
-                        target: '心经',
-                        value: 17
-                    },
-                    {
-                        source: '钟子期',
-                        target: '国民少女',
-                        value: 3
-                    },
-                    {
-                        source: '钟子期',
-                        target: '军神',
-                        value: 3
-                    },
-                    {
-                        source: '钟子期',
-                        target: '桐姐',
-                        value: 4
-                    },
-                    {
-                        source: '钟子期',
-                        target: '钟烟花',
-                        value: 4
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '国民少女',
-                        value: 3
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '大师范',
-                        value: 66
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '柏乌亲王',
-                        value: 6
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '卡顿',
-                        value: 13
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '九成宫书法',
-                        value: 253
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '李匹夫',
-                        value: 10
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '屠夫',
-                        value: 4
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '柯保宁',
-                        value: 4
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '心经',
-                        value: 7
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '齐大兵',
-                        value: 3
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '沃斯',
-                        value: 5
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '李封',
-                        value: 5
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '木恩',
-                        value: 5
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '白槿',
-                        value: 3
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '杜少卿',
-                        value: 16
-                    },
-                    {
-                        source: '怀草诗',
-                        target: '邰之源',
-                        value: 3
-                    },
-                    {
-                        source: '大师范',
-                        target: '纳斯里',
-                        value: 15
-                    },
-                    {
-                        source: '大师范',
-                        target: '九成宫书法',
-                        value: 115
-                    },
-                    {
-                        source: '大师范',
-                        target: '李匹夫',
-                        value: 14
-                    },
-                    {
-                        source: '大师范',
-                        target: '老东西',
-                        value: 5
-                    },
-                    {
-                        source: '大师范',
-                        target: '白槿',
-                        value: 12
-                    },
-                    {
-                        source: '大师范',
-                        target: '天宁万寿禅寺碑',
-                        value: 21
-                    },
-                    {
-                        source: '大师范',
-                        target: '军神',
-                        value: 4
-                    },
-                    {
-                        source: '大师范',
-                        target: '心经',
-                        value: 9
-                    },
-                    {
-                        source: '大师范',
-                        target: '席勒',
-                        value: 5
-                    },
-                    {
-                        source: '大师范',
-                        target: '苏珊大妈',
-                        value: 4
-                    },
-                    {
-                        source: '大师范',
-                        target: '五人小组',
-                        value: 3
-                    },
-                    {
-                        source: '大师范',
-                        target: '邰之源',
-                        value: 6
-                    },
-                    {
-                        source: '大师范',
-                        target: '帕布尔',
-                        value: 4
-                    },
-                    {
-                        source: '柏乌亲王',
-                        target: '纳斯里',
-                        value: 4
-                    },
-                    {
-                        source: '卡顿',
-                        target: '柏乌亲王',
-                        value: 8
-                    },
-                    {
-                        source: '卡顿',
-                        target: '跋洛神赋十三行',
-                        value: 3
-                    },
-                    {
-                        source: '卡顿',
-                        target: '九成宫书法',
-                        value: 12
-                    },
-                    {
-                        source: '卡顿',
-                        target: '纳斯里',
-                        value: 4
-                    },
-                    {
-                        source: '卡顿',
-                        target: '木恩',
-                        value: 4
-                    },
-                    {
-                        source: '纳尔逊中将',
-                        target: '杜少卿',
-                        value: 3
-                    },
-                    {
-                        source: '颜丙燕',
-                        target: '柳青松',
-                        value: 3
-                    },
-                    {
-                        source: '萧十三楼',
-                        target: '刘佼',
-                        value: 3
-                    },
-                    {
-                        source: '达文西',
-                        target: '萧十三楼',
-                        value: 13
-                    },
-                    {
-                        source: '达文西',
-                        target: '白玉兰',
-                        value: 5
-                    },
-                    {
-                        source: '达文西',
-                        target: '顾惜风',
-                        value: 28
-                    },
-                    {
-                        source: '达文西',
-                        target: '赫雷',
-                        value: 3
-                    },
-                    {
-                        source: '达文西',
-                        target: '笛卡尔',
-                        value: 7
-                    },
-                    {
-                        source: '钟瘦虎',
-                        target: '李在道',
-                        value: 4
-                    },
-                    {
-                        source: '钟瘦虎',
-                        target: '九成宫书法',
-                        value: 31
-                    },
-                    {
-                        source: '钟瘦虎',
-                        target: '军神',
-                        value: 7
-                    },
-                    {
-                        source: '钟瘦虎',
-                        target: '李匹夫',
-                        value: 5
-                    },
-                    {
-                        source: '钟瘦虎',
-                        target: '杜少卿',
-                        value: 8
-                    },
-                    {
-                        source: '于澄海',
-                        target: '军神',
-                        value: 4
-                    },
-                    {
-                        source: '于澄海',
-                        target: '李在道',
-                        value: 6
-                    },
-                    {
-                        source: '于澄海',
-                        target: '李匹夫',
-                        value: 6
-                    },
-                    {
-                        source: '东方玉',
-                        target: '周玉',
-                        value: 9
-                    },
-                    {
-                        source: '东方玉',
-                        target: '杜少卿',
-                        value: 33
-                    },
-                    {
-                        source: '东方玉',
-                        target: '顾惜风',
-                        value: 7
-                    },
-                    {
-                        source: '东方玉',
-                        target: '老白',
-                        value: 3
-                    },
-                    {
-                        source: '东方玉',
-                        target: '达文西',
-                        value: 7
-                    },
-                    {
-                        source: '怀夫差',
-                        target: '白槿',
-                        value: 3
-                    },
-                    {
-                        source: '怀夫差',
-                        target: '卡顿',
-                        value: 4
-                    },
-                    {
-                        source: '怀夫差',
-                        target: '纳斯里',
-                        value: 6
-                    },
-                    {
-                        source: '怀夫差',
-                        target: '九成宫书法',
-                        value: 16
-                    },
-                    {
-                        source: '李飞绒',
-                        target: '九成宫书法',
-                        value: 13
-                    },
-                    {
-                        source: '李飞绒',
-                        target: '林半山',
-                        value: 10
-                    },
-                    {
-                        source: '李飞绒',
-                        target: '林惜花',
-                        value: 4
-                    },
-                    {
-                        source: '白槿',
-                        target: '李匹夫',
-                        value: 3
-                    },
-                    {
-                        source: '白槿',
-                        target: '天宁万寿禅寺碑',
-                        value: 3
-                    },
-                    {
-                        source: '纳斯里',
-                        target: '怀草诗',
-                        value: 8
-                    },
-                    {
-                        source: '纳斯里',
-                        target: '心经',
-                        value: 7
-                    },
-                    {
-                        source: '齐大兵',
-                        target: '九成宫书法',
-                        value: 61
-                    },
-                    {
-                        source: '齐大兵',
-                        target: '大师范',
-                        value: 3
-                    },
-                    {
-                        source: '齐大兵',
-                        target: '木恩',
-                        value: 3
-                    },
-                    {
-                        source: '齐大兵',
-                        target: '唐志中',
-                        value: 9
-                    },
-                    {
-                        source: '苏珊大妈',
-                        target: '九成宫书法',
-                        value: 39
-                    },
-                    {
-                        source: '苏珊大妈',
-                        target: '保罗',
-                        value: 20
-                    },
-                    {
-                        source: '苏珊大妈',
-                        target: '大妈',
-                        value: 8
-                    },
-                    {
-                        source: '苏珊大妈',
-                        target: '怀草诗',
-                        value: 6
-                    },
-                    {
-                        source: '苏珊大妈',
-                        target: '亚瑟',
-                        value: 6
-                    },
-                    {
-                        source: '苏珊大妈',
-                        target: '钟烟花',
-                        value: 4
-                    },
-                    {
-                        source: '保罗',
-                        target: '九成宫书法',
-                        value: 35
-                    },
-                    {
-                        source: '保罗',
-                        target: '大妈',
-                        value: 5
-                    },
-                    {
-                        source: '保罗',
-                        target: '怀草诗',
-                        value: 4
-                    },
-                    {
-                        source: '保罗',
-                        target: '熊临泉',
-                        value: 9
-                    },
-                    {
-                        source: '保罗',
-                        target: '东方玉',
-                        value: 5
-                    },
-                    {
-                        source: '木恩',
-                        target: '九成宫书法',
-                        value: 38
-                    },
-                    {
-                        source: '木恩',
-                        target: '邹郁',
-                        value: 4
-                    },
-                    {
-                        source: '沃斯',
-                        target: '木恩',
-                        value: 4
-                    },
-                    {
-                        source: '沃斯',
-                        target: '齐大兵',
-                        value: 4
-                    },
-                    {
-                        source: '钟家老太爷',
-                        target: '钟子期',
-                        value: 4
-                    },
-                    {
-                        source: '钟家老太爷',
-                        target: '九成宫书法',
-                        value: 3
-                    },
-                    {
-                        source: '曹秋道',
-                        target: '施清海',
-                        value: 7
-                    },
-                    {
-                        source: '曹秋道',
-                        target: '乔治卡林',
-                        value: 3
-                    },
-                    {
-                        source: '保尔森',
-                        target: '九成宫书法',
-                        value: 9
-                    },
-                    {
-                        source: '贝得曼',
-                        target: '九成宫书法',
-                        value: 22
-                    },
-                    {
-                        source: '贝得曼',
-                        target: '菲利浦',
-                        value: 4
-                    },
-                    {
-                        source: '金求德',
-                        target: '南水',
-                        value: 4
-                    },
-                    {
-                        source: '金求德',
-                        target: '莱克',
-                        value: 3
-                    },
-                    {
-                        source: '金求德',
-                        target: '张小萌',
-                        value: 3
-                    },
-                    {
-                        source: '菲利浦',
-                        target: '老东西',
-                        value: 9
-                    },
-                    {
-                        source: '菲利浦',
-                        target: '钟烟花',
-                        value: 8
-                    },
-                    {
-                        source: '菲利浦',
-                        target: '五人小组',
-                        value: 3
-                    },
-                    {
-                        source: '菲利浦',
-                        target: '苏珊大妈',
-                        value: 3
-                    },
-                    {
-                        source: '菲利浦',
-                        target: '李在道',
-                        value: 3
-                    },
-                    {
-                        source: '唐志中',
-                        target: '九成宫书法',
-                        value: 9
-                    },
-                    {
-                        source: '胡链',
-                        target: '李在道',
-                        value: 5
-                    },
-                    {
-                        source: '胡链',
-                        target: '李封',
-                        value: 4
-                    },
-                    {
-                        source: '胡链',
-                        target: '赫雷',
-                        value: 9
-                    },
-                    {
-                        source: '胡链',
-                        target: '顾惜风',
-                        value: 3
-                    },
-                    {
-                        source: '胡链',
-                        target: '达文西',
-                        value: 4
-                    },
-                    {
-                        source: '韩楚',
-                        target: '张小花',
-                        value: 14
-                    },
-                    {
-                        source: '韩楚',
-                        target: '九成宫书法',
-                        value: 5
-                    },
-                    {
-                        source: '贝里',
-                        target: '杜少卿',
-                        value: 3
-                    },
-                    {
-                        source: '贝里',
-                        target: '胡链',
-                        value: 8
-                    },
-                    {
-                        source: '贝里',
-                        target: '达文西',
-                        value: 3
-                    },
-                    {
-                        source: '阿兹拉',
-                        target: '九成宫书法',
-                        value: 9
-                    },
-                    {
-                        source: '笛卡尔',
-                        target: '林半山',
-                        value: 3
-                    },
-                    {
-                        source: '笛卡尔',
-                        target: '九成宫书法',
-                        value: 5
-                    },
-                    {
-                        source: '林惜花',
-                        target: '林半山',
-                        value: 3
-                    },
-                    {
-                        source: '林惜花',
-                        target: '九成宫书法',
-                        value: 7
-                    },
-                    {
-                        source: '胡宗华',
-                        target: '江锦',
-                        value: 3
+                        source: '范成大',
+                        target: '米芾',
                     }
+                    
                 ]
             }]
         };

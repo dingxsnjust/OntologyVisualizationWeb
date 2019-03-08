@@ -17,4 +17,4 @@ def index():
         ' ORDER BY created DESC'
     ).fetchall()
     '''
-    return render_template('Histogram.html')
+    return render_template('NetworkDiagram.html')
