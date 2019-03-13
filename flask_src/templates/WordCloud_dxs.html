@@ -1,0 +1,474 @@
+<!--
+<!doctype html>
+<title>Ontology Visualization</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<div align="center" class="search">
+    <form method="post">
+        <input type="text" name="search" id="searchInput" required>
+        <input type="submit" id="searchSubmit" value="搜索">
+    </form>
+</div>
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>书法作品词云</title>
+    <!-- 引入 echarts.js -->
+    <script src="{{ url_for('static', filename='echarts.min.js') }}"></script>  
+    <script src="{{ url_for('static', filename='jquery-3.3.1.js') }}"></script>
+    <script type="text/javascript" src="http://data-visual.cn/datav/src/js/echarts/extension/echarts-wordcloud.min.js"></script>
+    
+    
+</head>
+<body>
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="width: 2050px;height:1050px;"></div>
+    <script type="text/javascript">
+        var myChart = echarts.init(document.getElementById('main'));
+        option = {
+            title: {
+                text: '书法作品分析',
+                link: 'https://www.baidu.com/s?wd=' + encodeURIComponent('ECharts'),
+                x: 'center',
+                textStyle: {
+                    fontSize: 60
+                }
+
+            },
+            backgroundColor: '#F7F7F7',
+            tooltip: {
+                show: true
+            },
+            toolbox: {
+                feature: {
+                    saveAsImage: {
+                        iconStyle: {
+                            normal: {
+                                color: '#FFFFFF'
+                            }
+                        }
+                    }
+                }
+            },
+            series: [{
+                name: '书法作品分析',
+                type: 'wordCloud',
+                //size: ['9%', '99%'],
+                sizeRange: [9, 250],
+                //textRotation: [0, 45, 90, -45],
+                rotationRange: [-45, 90],
+                //shape: 'circle',
+                textPadding: 0,
+                autoSize: {
+                    enable: true,
+                    minSize: 6
+                },
+                textStyle: {
+                    normal: {
+                        color: function() {
+                            return 'rgb(' + [
+                                Math.round(Math.random() * 160),
+                                Math.round(Math.random() * 160),
+                                Math.round(Math.random() * 160)
+                            ].join(',') + ')';
+                        }
+                    },
+                    emphasis: {
+                        shadowBlur: 10,
+                        shadowColor: '#333'
+                    }
+                },
+                data: [{
+                    name: "兰亭集序",
+                    value: 1998
+                }, {
+                    name: "砥柱铭卷",
+                    value: 1462
+                }]
+            }]
+        };
+
+        var JosnList = [];
+
+        JosnList.push({
+            name: "书体",
+            value: "2050"
+        }, {
+            name: "艺术",
+            value: "2200"
+        }, {
+            name: "创作",
+            value: "1050"
+        }, {
+            name: "题跋",
+            value: "900"
+        }, {
+            name: "批评",
+            value: "1400"
+        }, {
+            name: "高等教育",
+            value: "1500"
+        }, {
+            name: "美术",
+            value: "275"
+        }, {
+            name: "行书",
+            value: "800"
+        }, {
+            name: "墓志",
+            value: "900"
+        }, {
+            name: "隶书",
+            value: "700"
+        }, {
+            name: "篆书",
+            value: "600"
+        }, {
+            name: "行草",
+            value: "600"
+        }, {
+            name: "美学",
+            value: "700"
+        }, {
+            name: "审美",
+            value: "700"
+        }, {
+            name: "创作美术创作",
+            value: "700"
+        }, {
+            name: "碑帖",
+            value: "580"
+        }, {
+            name: "楷书",
+            value: "580"
+        }, {
+            name: "理论",
+            value: "580"
+        }, {
+            name: "教育",
+            value: "890"
+        }, {
+            name: "教学",
+            value: "700"
+        }, {
+            name: "临摹",
+            value: "560"
+        }, {
+            name: "篆刻",
+            value: "540"
+        }, {
+            name: "书风",
+            value: "670"
+        }, {
+            name: "论书",
+            value: "660"
+        }, {
+            name: "碑学",
+            value: "650"
+        }, {
+            name: "书学",
+            value: "600"
+        }, {
+            name: "于右任",
+            value: "680"
+        }, {
+            name: "草书",
+            value: "540"
+        }, {
+            name: "北碑",
+            value: "550"
+        }, {
+            name: "专业",
+            value: "690"
+        }, {
+            name: "篆体",
+            value: "530"
+        }, {
+            name: "民国",
+            value: "480"
+        }, {
+            name: "标准",
+            value: "560"
+        }, {
+            name: "建设",
+            value: "650"
+        }, {
+            name: "传统",
+            value: "580"
+        }, {
+            name: "培养",
+            value: "590"
+        }, {
+            name: "千字文",
+            value: "380"
+        }, {
+            name: "隋代",
+            value: "380"
+        }, {
+            name: "吴昌硕",
+            value: "380"
+        }, {
+            name: "观念",
+            value: "430"
+        }, {
+            name: "魏碑",
+            value: "430"
+        }, {
+            name: "美术史",
+            value: "380"
+        }, {
+            name: "董其昌",
+            value: "380"
+        }, {
+            name: "玄学",
+            value: "380"
+        }, {
+            name: "纸本",
+            value: "380"
+        }, {
+            name: "王羲之",
+            value: "380"
+        }, {
+            name: "理学",
+            value: "380"
+        }, {
+            name: "黄庭坚",
+            value: "380"
+        }, {
+            name: "模式",
+            value: "430"
+        }, {
+            name: "国学",
+            value: "430"
+        }, {
+            name: "古代",
+            value: "350"
+        }, {
+            name: "徐渭",
+            value: "350"
+        }, {
+            name: "兰亭",
+            value: "350"
+        }, {
+            name: "作品",
+            value: "350"
+        }, {
+            name: "文化",
+            value: "460"
+        }, {
+            name: "研究生",
+            value: "350"
+        }, {
+            name: "潘天寿",
+            value: "340"
+        }, {
+            name: "学术",
+            value: "350"
+        }, {
+            name: "章草",
+            value: "350"
+        }, {
+            name: "兰亭序",
+            value: "240"
+        }, {
+            name: "傅山",
+            value: "350"
+        }, {
+            name: "八大山人",
+            value: "360"
+        }, {
+            name: "米芾",
+            value: "240"
+        }, {
+            name: "王铎",
+            value: "350"
+        }, {
+            name: "八大山人",
+            value: "370"
+        }, {
+            name: "残片",
+            value: "240"
+        }, {
+            name: "赵孟",
+            value: "240"
+        }, {
+            name: "层次性",
+            value: "128"
+        }, {
+            name: "上海图书馆",
+            value: "128"
+        }, {
+            name: "张旭",
+            value: "128"
+        }, {
+            name: "甲骨文",
+            value: "128"
+        }, {
+            name: "梁武帝",
+            value: "128"
+        }, {
+            name: "消解",
+            value: "128"
+        }, {
+            name: "行宫记",
+            value: "150"
+        }, {
+            name: "圣教",
+            value: "147"
+        }, {
+            name: "文士",
+            value: "147"
+        }, {
+            name: "表象",
+            value: "147"
+        }, {
+            name: "建构",
+            value: "147"
+        }, {
+            name: "黄易",
+            value: "571"
+        }, {
+            name: "陈师",
+            value: "771"
+        }, {
+            name: "维度",
+            value: "141"
+        }, {
+            name: "本体论",
+            value: "341"
+        }, {
+            name: "不端",
+            value: "541"
+        }, {
+            name: "博物院",
+            value: "341"
+        }, {
+            name: "师法",
+            value: "541"
+        }, {
+            name: "殿试",
+            value: "541"
+        }, {
+            name: "怀素",
+            value: "541"
+        }, {
+            name: "张怀",
+            value: "441"
+        }, {
+            name: "沈曾植",
+            value: "141"
+        },{
+            name: "人才",
+            value: "2017"
+        }, {
+            name: "朱熹",
+            value: "509"
+        }, {
+            name: "楚生",
+            value: "408"
+        }, {
+            name: "笔法",
+            value: "147"
+        }, {
+            name: "边款",
+            value: "147"
+        }, {
+            name: "道家",
+            value: "147"
+        }, {
+            name: "原理",
+            value: "147"
+        }, {
+            name: "中国书协",
+            value: "147"
+        }, {
+            name: "绘画",
+            value: "417"
+        }, {
+            name: "敦煌",
+            value: "147"
+        }, {
+            name: "艺术美",
+            value: "147"
+        }, {
+            name: "家书",
+            value: "147"
+        }, {
+            name: "金文",
+            value: "147"
+        }, {
+            name: "士人",
+            value: "147"
+        }, {
+            name: "品评",
+            value: "147"
+        }, {
+            name: "苏轼",
+            value: "147"
+        }, {
+            name: "写经",
+            value: "147"
+        }, {
+            name: "教育学",
+            value: "147"
+        }, {
+            name: "融合",
+            value: "150"
+        }, {
+            name: "书画",
+            value: "150"
+        }, {
+            name: "时代",
+            value: "164"
+        }, {
+            name: "评价",
+            value: "150"
+        }, {
+            name: "人文",
+            value: "150"
+        }, {
+            name: "国际化",
+            value: "190"
+        }, {
+            name: "传授",
+            value: "150"
+        }, {
+            name: "女性",
+            value: "150"
+        }, {
+            name: "学者",
+            value: "150"
+        }, {
+            name: "出版社",
+            value: "150"
+        }, {
+            name: "师资",
+            value: "150"
+        }, {
+            name: "草圣",
+            value: "150"
+        }, {
+            name: "文献",
+            value: "150"
+        }, {
+            name: "思维",
+            value: "150"
+        }, {
+            name: "实践",
+            value: "150"
+        }, {
+            name: "沈尹默",
+            value: "150"
+        });
+
+        option.series[0].data = JosnList;
+
+
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);        
+
+        
+    </script>
+</body>
+</html>
